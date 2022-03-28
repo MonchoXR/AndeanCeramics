@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AndeanCeramic</title>
+
+    <!-- Inicio Link Favicon-->
+    <link rel="shortcut icon" href="logo/logo.ico" type="image/x-icon">
+    <!--Fin Link Favicon-->
+
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <!--Inicio Link de GoogleFonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Source+Serif+4:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <!--Fin Link de GoogleFonts-->
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+
+<body>
+    <!----- Incio Encabezado ----->
+    <header>
+        <nav>
+            <!--Logo-->
+            <img src="logo/logo_small.png" alt="Logo de mi empresa" title="Logo de mi empresa">
+            <!--Logo-->
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="paginas/about.html">About</a></li>
+                <li><a href="paginas/products.html">Products</a>
+                    <ul class="submenu">
+                        <li><a href="#">Producto #1</a></li>
+                        <li><a href="#">Producto #2</a></li>
+                        <li><a href="#">Producto #3</a></li>
+                    </ul>
+                </li>
+                <li><a href="paginas/blog.html">Blog</a></li>
+                <li><a href="paginas/contact.html">Contact</a></li>
+                <span class="material-icons-round">account_circle </span>
+                <span class="material-icons-round"> shopping_cart</span>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!----- Fin Encabezado ----->
+
+    <main class="index__main">
+        <div class="index__titulo">
+            <h1 class="index__titulo--Tipografia"> Unique Ceramics from Andean Countries</h1>
+        </div>
+        <div class="index__mainBloque">
+            <div class="index__mainBloque1">
+                <p class="index__subtitulo--Tipografia"> Exclusive Andean ceramics.</p>
+                <p class="index__subtitulo--Tipografia"> See a 3D model in your space with our Augmented Reality</p>
+                <button class="index__buttonMain">Join</button>
+            </div>
+            <article class="index__mainBloque2">
+
+                <!-- <model-viewer> HTML element -->
+                <model-viewer bounds="tight" enable-pan src="Assets/Kero.glb" 
+                ar 
+                ar-modes="scene-viewer webxr quick-look"
+                camera-controls environment-image="neutral" 
+                poster="Assets/poster.png" 
+                shadow-intensity="0" 
+                exposure="0.3"
+                auto-rotate >
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                </model-viewer>
+                <!-- <model-viewer> HTML element -->
+                <!-- <img class="index__imagenPrincipal" src="Assets/Jarras.jpg" alt="Logo de mi empresa"
+                    title="Logo de mi empresa"> -->
+
+            </article>
+        </div>
+    </main>
+
+    <div class="whatsapp">
+
+    </div>
+
+    <section class="index__events">
+        <h1>Upcoming Events</h1>
+
+    </section>
+
+    <section class="container__events">
+
+        <div class="caja">
+            <div class="date">
+                <h1>14</h1>
+                <h1>Jul</h1>
+            </div>
+            <div class="titulo">
+                <h1>FOOTBALL WORLD CUP SCREENING</h2>
+            </div>
+            <div class="hora">
+                <h3> <span> &#9201 </span> 23:00</h3>
+            </div>
+        </div>
+
+        <div class="caja">
+            <div class="date">
+                <h1>15</h1>
+                <h1>Jul</h1>
+            </div>
+            <div class="titulo">
+                <h1>FOOTBALL WORLD CUP SCREENING</h1>
+            </div>
+            <div class="hora">
+                <h3> <span> &#9201 </span> 23:00</h3>
+            </div>
+        </div>
+
+        <div class="caja">
+            <div class="date">
+                <h1>16</h1>
+                <h1>Jul</h1>
+            </div>
+            <div class="titulo">
+                <h1>FOOTBALL WORLD CUP SCREENING</h1>
+            </div>
+            <div class="hora">
+                <h3> <span> &#9201 </span> 23:00</h3>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <footer>
+        <p>Logo</p>
+        <p>Categories</p>
+        <p>WriteUS</p>
+        <p>Quick Links</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+00:59:48	Estefanía Cufré:	hola! buenas noches!
+01:00:28	Marina Francalancia:	🙌🏻
+01:01:28	[tutora] Candela Casazza:	gracias!!!
+01:01:39	Lucas Fernandez Carbonell:	suerte cande!
+01:01:51	Lucia Rebollo:	cande!!!!! Felicitaciones!!! buena suerte en esta nueva etapa!!!
+01:01:57	Lucia Rebollo:	bienvenida Erika!
+01:02:00	[tutora] Candela Casazza:	gracias chicos ♥♥♥
+01:02:02	Elias Emanuel Messina:	Buenasss
+01:08:17	[Tutor] Matías Azar:	72hs hábiles para correcciones, 24hs hábiles para consultas
+01:09:07	Guillermo Chiantore:	Donde te escribimos?
+01:09:30	Simon Marquez:	Se valora esta parte de la clase?
+01:09:31	Guillermo Chiantore:	Ok!
+01:11:12	[tutora] Candela Casazza:	gracias genia ♥♥♥
+01:24:25	Valentín Cide:	si si
+01:33:30	Lucas Fernandez Carbonell:	siempre prevalece el mínimo mas próximo?
+01:33:53	Noelia Comatto:	pregunta: para celular no se escribe @media?
+01:33:56	[Tutor] Matías Azar:	algo para que tengan en cuenta... piensen que están seteando "brechas" de tamaños en donde su sitio va a funcionar de una determinada manera... esa brecha la pueden determinar con ancho minimo o ancho máximo también
+01:34:40	Gianne Lopez:	no se puede poner max-width y min-width?
+01:34:43	Lucas Fernandez Carbonell:	entonces si queremos diferenciar bien cada tamaño es conveniente limitarlo entre min y max?
+01:34:47	[Tutor] Matías Azar:	no hay una única forma de armar esas brechas... piensen bien en base a lo que uds necesitan en sus proyectos y armen las media query necesarias
+01:34:57	[TUTOR]Jean Baladi:	Noelia, es dependiendo, si se trabaja con first-mobile los estilos globales ya son directamente a mobile
+01:35:15	[Tutor] Matías Azar:	si ponen solo min por ejemplo... es desde lo mas grande hasta ese ancho minimo… si ponen ancho máximo es desde lo mas chico hasta ese ancho máximo...
+01:35:20	[Tutor] Matías Azar:	a menos que pongan minimo y máximo
+01:35:33	[Tutor] Matías Azar:	o tengan otra media querie que la ajuste después a continuación y reduzca la brecha
+01:35:33	Lucas Fernandez Carbonell:	perfecto, clarisimo
+01:35:42	[TUTOR]Jean Baladi:	Si Gianne, se puede establecer asi como lo mencionas también, pero es mas usado directamen solo min-width o max-width
+01:36:00	Noelia Comatto:	Entiendo Jean, gracias
+01:36:23	Nicolas Benitez:	como influye esto cuando se hace Zoom en el sitio?
+01:36:53	Gianne Lopez:	ok gracias
+01:37:10	Alejandro Nicolas Geringer:	consulta, si o si hay que generar esa brecha y modificarlo para mobbie y tablet? no puedo dejar que se vea en cualquier dispositivo de la misma forma?
+01:37:24	[Tutor] Matías Azar:	el zoom es completamente independiente
+01:37:28	Gabriel Mendez:	sisi
+01:37:28	Alexis David Varela Nosicosky:	es conveniente trabajar en % los tamaños para no tener que modificar cada uno de los elementos ?
+01:37:53	[Tutor] Matías Azar:	si podes Alejandro... el tema con eso es que en pantallas chicas tener 3 columas de texto o imágenes por ejemplo hace casi imposible leer o ver bien las img
+01:38:04	[Tutor] Matías Azar:	entonces con esto por ej podes pasar de 3 columnas a una unica
+01:38:11	[Tutor] Matías Azar:	o modificar el tamaño de la tipografía
+01:38:22	[Tutor] Matías Azar:	o inclusive ocultar cosas según el tamaño de pantalla...
+01:38:42	[Tutor] Matías Azar:	poder se puede, pero no se veria optimizado el contenido
+01:38:45	Alejandro Nicolas Geringer:	ahh bien!! gracias Mati
+01:41:32	Valentín Cide:	Se podría dejar todo como esta pero si se trabaja en una version mobile o tablet solo cambiaria los tamaños no?
+01:43:23	Agustin Arana:	Si, incluso el orden en el que aparecen las cosas
+01:43:28	[TUTOR]Jean Baladi:	Exactamente Valentin, estableces los tamaños exactos donde quieres crear los "break points", pero si, puedes seguir trabajando con tu proyecto tal cual como lo tienes
+01:43:41	Agustin Arana:	Por ejemplo, definir dos disposiciones de grid diferentes en dos tamaños diferentes
+01:44:00	[TUTOR]Jean Baladi:	Asi mismo es como se usa Agus!
+01:44:01	[TUTOR] Tomas Babikian:	Claro Agustin!
+01:44:52	Valentín Cide:	Gracias Jean, obviamente que hay que modificaros porque sino va a quedar todo muy mal
+01:44:53	Gabriel Chávez:	perfecto
+01:44:53	Valentín Cide:	jaja
+01:44:54	Néstor Meira:	si
+01:44:57	Valentín Cide:	si si
+01:44:57	Nicolas Benitez:	si
+01:44:59	Gabriel Mendez:	sisis
+01:45:00	Rodrigo Muñoz:	sisi
+01:45:01	Marcos Zaro:	si
+01:45:02	Mariana Carmela Márquez Páez:	👍🏽
+01:45:05	Alan Hindryck:	si perfecto
+01:45:08	Lucas Cepeda:	basicamente depende de como empezaste a codear
+01:46:10	Lucas Fernandez Carbonell:	en el punto en el que estamos, en el que hay que rearmar todo con flex o grid seria conveniente pasas mobile first no?
+01:46:18	Lucas Fernandez Carbonell:	pasar
+01:46:42	Gabriel Chávez:	y horizontal? jaja
+01:46:58	Javier Camilo España Cataño:	Osea que podemos añadir eso después de usar FlexBox o Grids, si?
+01:47:05	Nicolas Benitez:	y se puede cambiar la cantidad de columnas a un grid
+01:47:15	Rodrigo Muñoz:	Todo bien!
+01:47:17	Javier Camilo España Cataño:	Si
+01:47:19	Néstor Meira:	si
+01:49:20	Damian Ferrara:	porque usamos ID y no Clase?
+01:49:24	Valentín Cide:	que seria fr?
+01:50:01	Javier Camilo España Cataño:	Decia animar
+01:50:23	[TUTOR]Jean Baladi:	fr = fracción
+01:50:24	[TUTOR] Tomas Babikian:	Fracción Valentin!
+01:50:34	Valentín Cide:	ahh pensé que era frame
+01:50:46	Octavio Cordeyro Equiza:	El diseño tiene que ser si o si con grids?
+01:50:58	Javier Camilo España Cataño:	Pue de ser con FlexBox
+01:51:00	Javier Camilo España Cataño:	o ambos
+01:51:13	Octavio Cordeyro Equiza:	Aaaa perfecto porque estaba full flex
+01:51:14	Octavio Cordeyro Equiza:	jajaja
+02:00:04	Nicolas Benitez:	joya
+02:00:07	Ezequiel Gimenez:	Si si
+02:00:09	Néstor Meira:	si
+02:00:11	Javier Camilo España Cataño:	Si
+02:00:12	Valentín Cide:	si
+02:00:14	Enzo Borda:	si
+02:00:18	Gianne Lopez:	si
+02:02:50	Tomas Margiottiello:	Todo bien hasta aca
+02:02:51	Javier Camilo España Cataño:	Todo bien
+02:02:51	Juan Bautista Parra:	no
+02:02:55	Valentín Cide:	nop
+02:02:55	Noelia Comatto:	No
+02:02:57	Marcos Zaro:	bien bien
+02:02:57	Estefanía Cufré:	todo bien!
+02:02:57	Javier Camilo España Cataño:	Aun team Grids
+02:02:59	Valentín Cide:	por ahora bien
+02:03:00	Carlos Calderon Montiveros:	no
+02:03:00	Lucia Rebollo:	no
+02:03:04	Julian Martinez:	no pero hay que procesar
+02:03:04	Adrián Campo:	Muy claro
+02:03:06	Gabriel Chávez:	si
+02:03:12	Nicolas Benitez:	hay favoritismo flexbox aca
+02:03:19	Nicole Lucarelli:	jajajaja
+02:03:28	Rodrigo Muñoz:	Viva flexbox :) jajajaja
+02:04:11	[tutora] Candela Casazza:	a mis alumnos les va a pasar el presente matias si?
+02:04:33	[tutora] Candela Casazza:	ya no tengo mas acceso 🙄
+02:04:43	[tutora] Candela Casazza:	y a partir del jueves esta erika
+02:07:47	[COORD] Matias Miró:	Luciano Diaz y Leonardo Mansilla
+02:08:04	[COORD] Matias Miró:	si están avisar para presente, únicos dos que figuran ausentes del grupo de cande
+02:08:20	[tutora] Candela Casazza:	Luciano esta
+02:08:33	[tutora] Candela Casazza:	y Leonardo tmb
+02:08:39	[tutora] Candela Casazza:	tieen otros apellidos
+02:08:47	[COORD] Matias Miró:	Listo
+02:08:50	[tutora] Candela Casazza:	por eso no te toma la asistencia automatica
+02:08:51	[COORD] Matias Miró:	gracias por avisar, todos presentes
+02:09:38	[tutora] Candela Casazza:	desp si pueden que les quede igual los apellidos de zoom con los de la plataforma
+02:09:43	[tutora] Candela Casazza:	para que les tome la asistencia
+02:09:54	[tutora] Candela Casazza:	se lo modifican en alguna de las dos
+02:14:01	Alan Hindryck:	siii
+02:14:07	Jonatan Sequeira:	sii
+02:14:08	Valentín Cide:	Se
+02:14:09	Lucia Rebollo:	si
+02:14:11	Enzo Borda:	sisi
+02:14:12	Dayana Correa:	si
+02:14:12	Marcos Zaro:	sisi
+02:15:59	Luciano Diaz Cuadrado:	matias te referis a mi? yo figuro como diaz cuadrado en ambos sitios
+02:21:11	Valentín Cide:	Para tenerlo claro seria de escritorio a mobile/tablet max-widht y de mobile a tablet/escritorio min-width no?
+02:21:54	Sofía Aguilera:	alguien sabe cual es ese plugin? q te muestra como mueve los elementos una propiedad
+02:22:53	Nicolas Benitez:	Sofi creo que es estándar del vs code
+02:23:09	Gabriel Chávez:	buenisimo
+02:23:47	Lucas Fernandez Carbonell:	pregunta, es posible hacer que nuestro nav se transforme en un botón que luego despliegue las opciones?
+02:24:36	Lucas Fernandez Carbonell:	perfecto!
+02:24:37	Lucas Fernandez Carbonell:	gracias
+02:24:52	Néstor Meira:	me gusta el nombre de ese menu
+02:24:57	Lucas Cepeda:	se debe llamar asi porque lo tienen todas las app de hamburgueserias
+02:27:14	Javier Camilo España Cataño:	Aca cobra sentido la medida REM? ya que habias dicho que estea medida era responsive
+02:27:51	Guillermo Chiantore:	No entiendo la diferencia del porcentaje
+02:27:54	Aldana Micaela Filiberto Acuña:	el porcentaje hace lo mismo?
+02:29:28	Lucas Cepeda:	esto puede servir por ejemplo para un header fijo, no??
+02:30:09	Martin Collahua:	justamente me pasa eso con el fondo
+02:30:13	Gianne Lopez:	y que medidas es mejor usar para imágenes?
+02:30:18	Martin Collahua:	se ve muy raro
+02:30:25	Javier Camilo España Cataño:	y videos pasa igual
+02:30:30	Néstor Meira:	buen dato
+02:31:21	Néstor Meira:	si
+02:31:26	Gaby Soto:	sip
+02:31:28	[Tutor] Matías Azar:	ojo cuando ajusten medidas con las proporciones! no deformen las imágenes!
+02:31:31	Jorge Mora:	sii
+02:32:20	Karina Lizbeth Abarca Reyes:	¿se pueden cambiar el tamaño de las imágenes en el código? o se tiene que hacer manual antes de ponerlas en la carpeta?
+02:32:54	Nicolas Benitez:	con width?
+02:32:55	[Tutor] Matías Azar:	si se puede desde el código...
+02:33:00	[Tutor] Matías Azar:	desde css
+02:33:21	Karina Lizbeth Abarca Reyes:	sería con width y height?
+02:33:28	[Tutor] Matías Azar:	lo ideal si es que la imagen la suban en la proporción correspondiente, en buena calidad y con el menor peso posible
+02:34:00	[Tutor] Matías Azar:	si... podes ajustar con esos atributos... normalmente solo utilizas uno y que el otro se ajuste automáticamente
+02:36:40	Karina Lizbeth Abarca Reyes:	gracias!
+02:38:32	Fernando Gomez:	si
+02:38:33	Marcos Zaro:	sisi
+02:38:34	Valentín Cide:	si
+02:38:34	Natán Yona:	Si
+02:38:34	Mariana Carmela Márquez Páez:	👍🏽
+02:38:36	Alan Hindryck:	sii perfecto
+02:38:37	Gaby Soto:	yep
+02:38:38	Gabriel Hoyos:	Sisi
+02:38:39	Alexis David Varela Nosicosky:	ya podemos usar distintas hojas de css para darle estilo a cada uno de nuestros HTML ?Como las organizamos y linkeamos ?
+02:38:40	Carlos Calderon Montiveros:	si
+02:38:42	Harijan Fernández:	sip
+02:38:43	Andrea Trapani:	si
+02:38:46	Rodriguez Dagostino Jose Emilio:	🥳
+02:38:48	Noelia Comatto:	claro, falta practicar
+02:39:05	Lucia Rebollo:	esto es mucho practica
+02:39:38	Alexis David Varela Nosicosky:	me quedaron como 500 líneas de código y tuve que comentar todo para no perderme !😞
+02:39:55	Octavio Cordeyro Equiza:	en la misma jajaj
+02:40:21	Octavio Cordeyro Equiza:	igual me ayudo banda ir comentando todo
+02:40:38	Valentín Cide:	se
+02:40:52	Alexis David Varela Nosicosky:	me siento re atrasado por que no use todavía ni flexbox ni grids y ahora se suma esto
+02:41:14	Luciano Cedrez:	Alexis no lo han pedido en ningún desafio todavia
+02:41:41	Lucas Fernandez Carbonell:	en la practica se suelen usar distintos css para cada HTML?
+02:41:42	Ivana María Lazovich:	No estas solo Alexis, jajaja
+02:42:17	Alexis David Varela Nosicosky:	😂
+02:42:46	Gabriel Chávez:	Para la adaptación horizontal tendría que modificar en height no? por si giro el dispositivo para ver la adaptación correcta.
+02:42:47	Guillermo Chiantore:	Un cls para todo
+02:42:50	Lucas Fernandez Carbonell:	claro, yo opino igual, me parece mas organizado
+02:42:57	Gabriel Chávez:	oka
+02:43:28	Alexis David Varela Nosicosky:	no
+02:43:32	Alexis David Varela Nosicosky:	a practicar nomas
+02:43:35	Aldana Micaela Filiberto Acuña:	cuando ponemos el porcentaje nos quita la scrollbar de todo el body, en cambio cuando usamos vw nos genera el scrollbar horizaontal?
+02:43:35	Alexis David Varela Nosicosky:	!!
+02:44:05	Guillermo Chiantore:	Mételo adentro de un a
+02:44:17	Nicolas Benitez:	freepiks
+02:44:18	Natalio De Blasis:	Sisi
+02:44:21	Natalio De Blasis:	Flaticon
+02:44:26	[Tutor] Matías Azar:	depende los valores que le des Aldana... si trabajas con un maximo de 100vw no deberías tener scroll horizontal
+02:44:49	Alexis David Varela Nosicosky:	si sabes usar illustrator o Photoshop bajas los vectores
+02:44:53	Javier Camilo España Cataño:	Puedo usar grids en mi web y flex en mi responsive?
+02:45:07	[Tutor] Matías Azar:	ojo que los márgenes, paddings y todo se suma para dar el ancho final
+02:45:45	[Tutor] Matías Azar:	si tienen una imagen con 100vw y a la vez le dan márgenes de 10px... la suma va a dar más que el ancho total de pantalla y van a tener un scroll horizontal
+02:46:21	Jonathan Kechian:	Glorioso ese aporte Mati! Gracias
+02:46:39	[Tutor] Matías Azar:	de nada!
+02:47:10	Gazaba Leonardo:	Disculpen, una consulta a los tutores, yo estaba como alumno de Cande y todavía no me figura la asistencia de hoy, por si todavía no se habían pasado o ya estaban pasadas por las dudas. Gracias!
+02:48:07	Javier Camilo España Cataño:	Podrias explicar el desafio que deja la siguiente clase?
+02:48:50	[COORD] Matias Miró:	Estas como presente Gazaba, actualiza la plataforma (puede demorar)
+02:49:09	Alexis David Varela Nosicosky:	Flor que nos recomendas para ir haciendo ? deberíamos ir pasando todo a flex y grids
+02:49:12	[TUTOR]Jean Baladi:	Aprovechen que soy el mas capo
+02:49:31	Micaela Estefania Olate:	😂
+02:49:35	Alexis David Varela Nosicosky:	para encarar el siguiente desafio
+02:49:55	Alexis David Varela Nosicosky:	perfecto
+02:50:05	Luciano Caro:	Buenas noches a todos
+02:50:06	[tutora] Candela Casazza:	yo me despidooo muchísimos éxitos a todos!!! trabajen mucho que la van a romper!
+02:50:12	Mariana Carmela Márquez Páez:	éxitos!
+02:50:14	Karen Vazquez de Novoa:	FLOR despues subis el css de hoy?
+02:50:14	juan Francisco Martinez:	éxitos cande!!!
+02:50:16	Alexis David Varela Nosicosky:	Suerte !
+02:50:16	Marcos Zaro:	suerte!!!
+02:50:17	[tutora] Candela Casazza:	graaaciasssss
+02:50:18	Lucas Feloy:	éxitos!!!!
+02:50:21	[TUTOR] Tomas Babikian:	Exitos Cande!! La mejor!
+02:50:21	Mariana Carmela Márquez Páez:	buenas noches a todos
+02:50:24	Octavio Cordeyro Equiza:	Gracias Kenn
+02:50:25	Valentín Cide:	exitos
+02:50:32	[tutora] Candela Casazza:	no soy ken ojo jajajjaj
+02:50:32	Karen Vazquez de Novoa:	suerte Cande!!!! Lo mejor!
+02:50:33	Juan Sacristan:	Feliz noche
+02:50:40	Alejandro Nicolas Geringer:	wii 🥳 muero de hambre! jajaja Hasta el jueves!
+02:50:47	Octavio Cordeyro Equiza:	Mala mia jaj
+02:50:51	Gaby Soto:	chauuuu
+02:50:51	Lucia Rebollo:	buenas noches!!!!
+02:50:51	[Tutor] Matías Azar:	saludos!
+02:50:51	Estefanía Cufré:	gracias!!
+02:50:51	Nicole Lucarelli:	hasta luego!
+02:50:52	Alan Hindryck:	buenas noches!!!
+02:50:54	[tutora] Candela Casazza:	adiossss
+02:50:54	Gabriel Huilipan:	saludos
+02:50:54	Javier Camilo España Cataño:	Chao, gracias :D
+02:50:54	Valentín Cide:	Saludos
+02:50:54	[TUTOR]Jean Baladi:	Buenas noches°
+02:50:54	Lucas Fernandez Carbonell:	bye
+02:50:56	Gabriel Chávez:	gracias
+02:50:57	[Tutora] Loana Torres:	Saludos!!
+02:50:58	Carlos Calderon Montiveros:	buenas noches
+02:50:58	Dayana Correa:	Bye
+02:50:58	Andres Rosales Rubione:	Saludos!!
+02:50:59	Andrea Trapani:	chau
+02:51:00	Gianne Lopez:	muchas gracias, hasta el Jueves
+02:51:00	Ariel Fontana:	suerte
+02:51:01	Jonathan Kechian:	Hasta el Jueves!
+02:51:01	[Tutora] Ara Orzanco:	nos vemos!
+02:51:02	Jonatan Sequeira:	Buenas noches!!
+02:51:06	Aranzazu Sanz:	buenas noches
