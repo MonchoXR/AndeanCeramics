@@ -7,7 +7,35 @@
      font-size: 62, 5%;
  }
 
+ @keyframes Zoom{
+    0% {transform: scale(0);
+    }
 
+    100% {transform: scale(1);
+    }
+ 
+  }
+
+  @keyframes Blur{
+    0% {
+      filter:blur(95px);
+        /* background-color: coral; */
+        width: 1px;
+        height: 1px;
+    }
+ 
+    50% {
+     filter:blur(30px);
+    }
+ 
+ 
+    100% {
+        /* filter: blur(); */
+    }
+    
+  }
+
+  
  nav {
  
      display: flex;
@@ -74,6 +102,7 @@
  }
 
 
+ 
  .index__main {
 
      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/BannerIndex.jpg");
@@ -83,9 +112,6 @@
      background-repeat: no-repeat;
      background-size: cover;
      
-
-
-
      display: flex;
      flex-direction: column;
 
@@ -93,9 +119,9 @@
 
      /*No centramos aqui para que ocupe todo el width*/
      /* align-items: center; */
-
      height: calc(100vh - 100px);
 
+     
 
  }
 
@@ -105,9 +131,12 @@
      align-items: center;
      height: 20%;
      /* background-color: red; */
+     animation: Zoom;
+     animation-duration: 1s;
+     animation-timing-function: ease-in-out;
+    animation-iteration-count: once;
+   
     
-
-
  }
 
  .index__titulo--Tipografia {
@@ -122,12 +151,10 @@
  .index__mainBloque {
 
      display: flex;
-     /* flex-wrap: wrap; */
      justify-content: center;
      align-items: center;
      height: 80%;
-     /* backdrop-filter: blur(5px); */
-     /* background-color: aqua; */
+
 
  }
 
@@ -151,6 +178,11 @@
      color: white;
      font-style: italic;
      font-size: 40px;
+     animation: Zoom;
+     animation-duration: 1s;
+     animation-timing-function: ease-in-out;
+     animation-iteration-count: once;
+   
  }
 
 
@@ -173,16 +205,25 @@
      display: flex;
      justify-content: center;
      align-items: center;
-  
-    /* background-color: aquamarine; */
+
+     animation: Blur;
+     animation-duration: 4s;
+     animation-timing-function: ease-in-out;
+    animation-iteration-count: once;
+
 
  }
 
  model-viewer{
      width: 100%;
      height: 600px;
-
-    /* background-color: aliceblue; */
+ 
+     animation: Blur;
+     animation-duration: 4s;
+     animation-timing-function: ease-in-out;
+    animation-iteration-count: once;
+   
+   
     
  }
 
@@ -518,20 +559,37 @@
 
      justify-content: center;
 
-     border: solid black;
+     /* border: solid black; */
  }
 
 
  .imagenProducto {
 
      grid-area: imagenProducto;
-     background-color: aqua;
+     
  }
 
  .imagenProducto img {
 
      width: 100%;
      height: auto;
+     transition: all 1s;
+ }
+
+ .imagenStory img:hover{
+    transform: scale(1.1);
+
+ }
+
+
+ .imagenStory img{
+    animation: Zoom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+   animation-iteration-count: once;
+  
+
+    
  }
 
 
@@ -926,11 +984,6 @@
          font-size: 25px;
      }
 
-
-     /* .index__imagenPrincipal {
-         width: 100%;
-         height: auto;
-     } */
 
      .index__titulo--Tipografia {
          font-size: 40;
