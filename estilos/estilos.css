@@ -35,28 +35,31 @@
     
   }
 
-  
- nav {
- 
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     align-items: center;
-     height: 100px;
+header{
     /* background-color: aqua; */
+    /* display: flex;
+    justify-content: space-around; */
+    /* height: 80px; */
+    /* flex-wrap: wrap; */
+
+    
+}
+
+ .navbar{
+    background-color: yellow;
+}
+
+header img {
+    /* width: 350px;
+     height: 100px; */
  }
 
- nav img {
-     width: 350px;
-     height: auto;
- }
-
- .menu {
+  /* .menu {
 
      list-style-type: none;
      display: flex;
      flex-wrap: wrap;
-     /* background-color: yellow; */
+
 
      align-items: center;
 
@@ -92,7 +95,9 @@
 
  .menu li:hover ul {
      display: block;
- }
+ } 
+
+  */
 
  .material-icons-round {
      padding-right: 25px;
@@ -119,7 +124,7 @@
 
      /*No centramos aqui para que ocupe todo el width*/
      /* align-items: center; */
-     height: calc(100vh - 100px);
+     height: calc(100vh - 80px);
 
      
 
@@ -856,9 +861,7 @@
 
  @media screen and (max-width: 1500px) {
 
-    nav{
-        height: auto;
-    }
+
     .index__mainBloque{
         flex-direction: column;
         justify-content: space-around;
@@ -868,7 +871,7 @@
 
     model-viewer{
         height: 350px;
-      
+        
     }
    
 
@@ -972,18 +975,10 @@
 
  @media screen and (max-width: 830px) {
 
-  
-     .menu {
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-
+    header img {
+        width: 250px;
+         height: auto;
      }
-
-     .menu li {
-         font-size: 25px;
-     }
-
 
      .index__titulo--Tipografia {
          font-size: 40;
@@ -1050,7 +1045,14 @@
  }
 
  @media screen and (max-width: 600px) {
-     .container__product {
+     
+    header img {
+        width: 200px;
+         height: auto;
+     }
+
+    
+    .container__product {
 
          display: grid;
          grid-template-columns: 1fr 1fr;
@@ -1155,17 +1157,9 @@
  @media screen and (max-width: 425px) {
 
 
+ 
 
-     .menu li {
-         font-size: 20px;
-     }
-
-     .menu li a {
-         text-decoration: none;
-         padding: 0px 10px;
-         color: black;
-     }
-
+  
      .index__titulo--Tipografia {
          font-size: 25px;
      }
