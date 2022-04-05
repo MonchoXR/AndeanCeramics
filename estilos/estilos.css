@@ -324,7 +324,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    height: 300px;
 }
 
 
@@ -566,11 +566,6 @@ header{
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-
-     display: flex;
-     justify-content: center;
-     align-items: center;
-
 
  }
 
