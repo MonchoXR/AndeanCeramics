@@ -42,7 +42,53 @@ header{
 }
 
 
+.index_category{
+    margin: 30px 0;
+}
 
+.index_cat_border{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eeeeee;
+    padding: 0;
+    margin: 0 10px;
+    
+
+    animation: Zoom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+   animation-iteration-count: once;
+
+
+  
+}
+
+.index_cat_border img{
+    filter: blur(2px);
+    opacity: 0.5;
+    transition: 0.6s ease all;
+}
+
+.index_cat_border img:hover{
+
+    transform:
+    perspective(800px)
+    rotateY(-15deg)
+    translateY(-30px)
+    rotateX(10deg)
+    scale(1);
+    filter: blur(0);
+    opacity: 1;
+ 
+}
+
+.index_cat_border2{
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eeeeee;
+
+}
  .material-icons-round {
      padding-right: 25px;
      font-size: 25px !important;
@@ -196,17 +242,13 @@ header{
 
  }
 
- .index__events {
-     display: flex;
-     justify-content: center;
-     padding: 20px 0;
- }
+ .index_secctionEvents{
 
- .index__events h1 {
-     font-size: 40px;
-     text-align: center;
+    margin-top: 50px;
 
  }
+
+ 
 
  .container__events {
 
@@ -220,7 +262,7 @@ header{
      grid-template-areas:
          "caja caja caja";
 
-     padding: 20px;
+     padding-bottom: 20px;
      
 
  }
@@ -930,6 +972,26 @@ header{
          box-sizing: border-box;
          width: 100%;
      } */
+ }
+
+ @media screen and (max-width: 768px) {
+    .index_cat_border{
+  
+     margin: 10px;
+
+
+    }
+
+    .index_cat_centrar{
+  
+ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+   
+       }
  }
 
  @media screen and (max-width: 600px) {
