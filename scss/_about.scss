@@ -1,0 +1,187 @@
+@import "_variables.scss";
+
+.banner__about {
+    grid-area: banner;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+
+
+.banner__about {
+    h1 {
+        color: white;
+        font-size: 40px;
+
+        @media screen and (max-width: 320px) {
+            font-size: 25px;
+
+        }
+        @media screen and (max-width: 160px) {
+            font-size: 10px
+        }
+    }
+
+    @media screen and (max-width: 830px) {
+        height: 300px;
+    }
+}
+
+.imagenStory__about {
+    img{
+        @media screen and (max-width: 830px) {
+            width: 50%;
+        }
+    }
+    
+}
+
+
+.material-icons-css{
+    color: $about-icon-color;
+    font-size: 40px !important;
+    @media screen and (max-width: 160px) {
+        font-size: 20px !important;
+    }
+    
+
+}
+
+.story {
+    grid-area: story;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 30px;
+        width: 80%;
+        @media screen and (max-width: 830px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 160px) {
+            font-size: 10px;
+        }
+    }
+}
+
+
+
+.imagenStory__about {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.story2 {
+    grid-area: story2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 30px;
+        width: 80%;
+        @media screen and (max-width: 830px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 160px) {
+            font-size: 10px;
+        }
+    }
+
+}
+.cards {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 5% 5%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4";
+    grid-area: cards;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h2{
+                @media screen and (max-width: 160px) {
+                    font-size: 12px;
+                }
+            }
+            p{
+                margin: 2px 0;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "card1"
+                "card2"
+                "card3"
+                "card4";
+            grid-area: cards;
+        }
+    }
+          
+.card1{
+    grid-area: card1;
+    p{
+        font-size: 20px;
+        @media screen and (max-width: 160px) {
+            font-size: 8px;
+        }
+    }
+}
+.card2{
+    grid-area: card2;
+    p{
+        font-size: 20px;
+        @media screen and (max-width: 160px) {
+            font-size: 8px;
+        }
+    }
+    
+}
+
+.card3 {
+    grid-area: card3;
+    p{
+        font-size: 20px;
+        @media screen and (max-width: 160px) {
+            font-size: 8px;
+        }
+    }
+}
+
+.card4 {
+    grid-area: card4;
+    p{
+        font-size: 20px;
+        @media screen and (max-width: 160px) {
+            font-size: 8px;
+        }
+    }
+}
+
+

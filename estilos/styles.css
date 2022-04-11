@@ -1,4 +1,163 @@
-h1 {
-  color: red; }
-  h1 h2 {
-    color: aqua; }
+* {
+  margin: 0;
+  padding: 0; }
+
+.listaNav a {
+  font-size: 25px;
+  padding: 0 20px; }
+
+.banner__about {
+  grid-area: banner;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px; }
+
+.banner__about h1 {
+  color: white;
+  font-size: 40px; }
+  @media screen and (max-width: 320px) {
+    .banner__about h1 {
+      font-size: 25px; } }
+  @media screen and (max-width: 160px) {
+    .banner__about h1 {
+      font-size: 10px; } }
+
+@media screen and (max-width: 830px) {
+  .banner__about {
+    height: 300px; } }
+
+@media screen and (max-width: 830px) {
+  .imagenStory__about img {
+    width: 50%; } }
+
+.material-icons-css {
+  color: red;
+  font-size: 40px !important; }
+  @media screen and (max-width: 160px) {
+    .material-icons-css {
+      font-size: 20px !important; } }
+
+.story {
+  grid-area: story;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .story p {
+    font-size: 30px;
+    width: 80%; }
+    @media screen and (max-width: 830px) {
+      .story p {
+        font-size: 20px; } }
+    @media screen and (max-width: 160px) {
+      .story p {
+        font-size: 10px; } }
+
+.imagenStory__about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.story2 {
+  grid-area: story2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .story2 p {
+    font-size: 30px;
+    width: 80%; }
+    @media screen and (max-width: 830px) {
+      .story2 p {
+        font-size: 20px; } }
+    @media screen and (max-width: 160px) {
+      .story2 p {
+        font-size: 10px; } }
+
+.cards {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 5% 5%;
+  grid-auto-flow: row;
+  grid-template-areas: "card1 card2" "card3 card4";
+  grid-area: cards; }
+  .cards div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+    @media screen and (max-width: 160px) {
+      .cards div h2 {
+        font-size: 12px; } }
+    .cards div p {
+      margin: 2px 0; }
+  @media screen and (max-width: 320px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "card1" "card2" "card3" "card4";
+      grid-area: cards; } }
+
+.card1 {
+  grid-area: card1; }
+  .card1 p {
+    font-size: 20px; }
+    @media screen and (max-width: 160px) {
+      .card1 p {
+        font-size: 8px; } }
+
+.card2 {
+  grid-area: card2; }
+  .card2 p {
+    font-size: 20px; }
+    @media screen and (max-width: 160px) {
+      .card2 p {
+        font-size: 8px; } }
+
+.card3 {
+  grid-area: card3; }
+  .card3 p {
+    font-size: 20px; }
+    @media screen and (max-width: 160px) {
+      .card3 p {
+        font-size: 8px; } }
+
+.card4 {
+  grid-area: card4; }
+  .card4 p {
+    font-size: 20px; }
+    @media screen and (max-width: 160px) {
+      .card4 p {
+        font-size: 8px; } }
+
+footer {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  color: white;
+  width: 100%; }
+  footer p {
+    font-size: 30px; }
+    @media screen and (max-width: 160px) {
+      footer p {
+        font-size: 10px; } }
+  @media screen and (max-width: 320px) {
+    footer {
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      width: 100%; } }

@@ -931,18 +931,7 @@ header{
     
     }
 
-    .card1 h1{
-        font-size: 25px;
-    }
-    .card2 h1{
-        font-size: 25px;
-    }
-    .card3 h1{
-        font-size: 25px;
-    }
-    .card4 h1{
-        font-size: 25px;
-    }
+
 
      .banner__producto h1 {
          color: white;
@@ -1038,10 +1027,7 @@ header{
              ". ";
              
      }
-     .search_blog {
-         margin: 40px 0;
-    }
-
+   
 
      /* .container__Contacto {
         display: grid;
