@@ -1,4 +1,24 @@
-.listaNav a {
-    font-size: 25px ; 
-    padding: 0 20px;
- }
+header{
+
+    // height: 10%;  
+    background-color: aqua;
+    nav{
+    
+        div{
+
+     
+            img{
+                @media screen and (max-width: 576px) {
+                  
+                 width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}

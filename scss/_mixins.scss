@@ -1,0 +1,8 @@
+@import "_variables.scss";
+
+@mixin seccionMargen ($size-max-width, $size-width,  $center-margin, $down-bottom) {
+    max-width: $size-max-width;
+    width: $size-width;
+    margin: $center-margin;
+    margin-bottom: $down-bottom;
+}

@@ -1,0 +1,259 @@
+.mapa{
+    height: 600px ;
+}
+
+.info {
+    grid-area: info;
+    display: flex;
+    justify-content: center;
+
+    div{
+        width: 280px;
+        height: 150px;
+        background-color: white;
+   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+    }
+}
+
+.visit {
+    h2{
+        font-size: 25px;
+    }
+    
+}
+
+.visit{
+    h4{
+        font-size: 16px;
+   }    
+}
+
+.talk {
+    h2{
+        font-size: 25px;
+    }  
+}
+
+.talk{
+    h4{
+        font-size: 16px;
+    }
+    
+}
+
+.working{
+    h2{
+        font-size: 25px;
+    }
+    
+}
+
+.working {
+    h4{
+        font-size: 16px;
+    }
+   
+}
+
+.contacto {
+    grid-area: Contacto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.tituloContacto {
+    grid-area: titulo;
+    width: 90%;
+    margin: 30px auto;
+    h1{
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+
+}
+
+.imagenContacto {
+    grid-area: imagenContacto;
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 1500px) {
+
+    .imagenContacto  {
+        width: 100%;
+    
+    
+    }
+     
+    .contacto_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+
+     .tituloContacto{
+        h1 {
+            font-size: 25px;
+        }
+     }
+
+     .tituloContacto{
+        h4 {
+            font-size: 16px;
+        }
+     }
+
+     .visit {
+        h2 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 12px;
+        }
+     }
+
+ 
+     .talk {
+        h2 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 12px;
+        }
+     }
+
+  
+     .working {
+        h2 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 12px;
+        }
+     }
+
+   
+    textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .tituloContacto {
+        h1 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 12px;
+        }
+    }
+
+
+
+    .visit {
+        h2 {
+            font-size: 15px;
+        }
+        h4 {
+            font-size: 10px;
+        }
+    }
+
+
+    .talk {
+        h2 {
+            font-size: 15px;
+        }
+
+        h4 {
+            font-size: 10px;
+        }
+    }
+
+  
+    .working{
+        h2 {
+            font-size: 15px;
+        }
+        h4 {
+            font-size: 10px;
+        }
+    
+    }
+
+
+
+    .info div {
+
+        width: 160px;
+        height: 200px;
+        background-color: white;
+        /* border-style: dashed; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+   
+    }
+
+    input{ 
+        width:100%;
+        padding: 0px;
+        border:1px solid black;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+      font-size: 5px;
+    }
+
+    label{
+        font-size: 5px;
+    }
+}

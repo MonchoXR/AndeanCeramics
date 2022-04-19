@@ -1,0 +1,22 @@
+@keyframes Zoom{
+    0% {transform: scale(0);
+    }
+
+    100% {transform: scale(1);
+    }
+ 
+  }
+
+@keyframes Blur{
+    0% {
+    filter:blur(95px);
+    
+    width: 1px;
+    height: 1px;
+    }
+ 
+    50% {
+     filter:blur(30px);
+    }
+    
+}

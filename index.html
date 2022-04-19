@@ -5,16 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AndeanCeramic</title>
-
+  <title>Andean Ceramics</title>
+  <meta name="keywords" content="ceramics, andean, vessel, craft, perú, los Angeles, handicraft shop, 3D, ar, Augmented Reality">
+  <meta name="description" content="Exclusive Andean Ceramics, See 3D Model in your space with Augmented Reality"
   <!-- Inicio Link Favicon-->
-  <link rel="shortcut icon" href="logo/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="logo/AndeanCeramicsFavicon.png" type="image/x-icon">
   <!--Fin Link Favicon-->
 
   <!-- inicio Bootstrap Viewer-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
   <!-- Fin Bootstrap Viewer-->
 
   <!--Inicio Link de GoogleFonts-->
@@ -25,65 +25,57 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
   <!--Fin Link de GoogleFonts-->
 
-
-
-  <link rel="stylesheet" href="estilos/estilos.css">
-
+  <!-- <link rel="stylesheet" href="estilos/estilos.css"> -->
+  <link rel="stylesheet" href="../estilos/styles.css">
 </head>
 
 <body>
 
   <!----- Incio Encabezado ----->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-      <div class="container-fluid generalNavBar ">
-
-        <img src="logo/logo_small.png" class="img-fluid" alt="MiLogo">
-
-        <div class="barraNavBar">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav listaNav">
-              <a class="nav-link active " aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="paginas/about.html">About</a>
-              <a class="nav-link" href="paginas/products.html">Products</a>
-              <a class="nav-link" href="paginas/blog.html">Blog</a>
-              <a class="nav-link" href="paginas/contact.html">Contact</a>
-            </div>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img src="logo/AndeanCeramics400x80.png" class="img-fluid" alt="MiLogo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <li><a class="nav-link active " aria-current="page" href="#">Home</a></li>
+            <li><a class="nav-link" href="paginas/about.html">About</a></li>
+            <li><a class="nav-link" href="paginas/products.html">Products</a></li>
+            <li><a class="nav-link" href="paginas/blog.html">Blog</a></li>
+            <li><a class="nav-link" href="paginas/contact.html">Contact</a></li>
+            <li><a class="nav-link active"><span class="material-icons-round">account_circle </span></a> </li>
+            <li><a class="nav-link active"><span class="material-icons-round">shopping_cart </span></a> </li>
+            </li>
+          </ul>
         </div>
-
-
+      </div>
     </nav>
-
-
-
-
   </header>
-
-
   <!----- Fin Encabezado ----->
 
   <main class="index__main">
-
-
     <div class="index__titulo">
       <h1 class="index__titulo--Tipografia"> Unique Ceramics from Andean Countries</h1>
     </div>
+
     <div class="index__mainBloque">
       <div class="index__mainBloque1">
         <p class="index__subtitulo--Tipografia"> Exclusive Andean ceramics.</p>
         <p class="index__subtitulo--Tipografia"> See a 3D model in your space with our Augmented Reality</p>
-        <button class="index__buttonMain">Join</button>
+        <!-- <button class="index__buttonMain">Join</button> -->
+        <a class="btn  index__buttonMain " href="#" role="button">Join</a>
+        <!-- <button type="button" class="btn btn-outline-primary">Join</button> -->
       </div>
       <article class="index__mainBloque2">
-
         <!-- <model-viewer> HTML element -->
-        <model-viewer bounds="tight" src="Assets/Kero.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls
-          environment-image="neutral" shadow-intensity="0" exposure="0.3" auto-rotate ar-status="not-presenting">
+        <model-viewer bounds="tight" src="Assets/Kero.glb" ar ar-scale="fixed" ar-modes="scene-viewer webxr quick-look"
+          camera-controls environment-image="neutral" shadow-intensity="0" exposure="0.3" auto-rotate
+          ar-status="not-presenting">
           <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
           </div>
@@ -91,147 +83,129 @@
             View in your space
           </button>
         </model-viewer>
-
-
       </article>
     </div>
-
   </main>
 
   <div class="whatsapp">
-
   </div>
 
-  <section>
-    <div class="container index_cat_centrar ">
-      <div class="row index_category">
-        <h2>Shop By Category</h2>
-      </div>
-      <div class="row index_cat_centrar ">
-        <div class="  col-sm-6 col-md index_cat_border ">
-  
-            <img src="Assets/catalogo/Bag600x600.jpg" class="img-fluid "   alt="Catalago1">
-            <h5 class=" text-center ">Accesories</h5>
-            
-        </div>
-        <div class=" col-sm-6 col-md  index_cat_border">
-          <img src="Assets/catalogo/CoffeCup600x600.jpg" class="img-fluid"   alt="Catalago2">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-        <div class="col-sm-6 col-md index_cat_border">
-          <img src="Assets/catalogo/HandWatch600x600.jpg" class="img-fluid"  alt="Catalago3">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-        <div class="col-sm-6 col-md index_cat_border ">
-          <img src="Assets/catalogo/zapto600x600.jpg" class="img-fluid"  alt="Catalago4">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-        <div class="col-sm-6 col-md index_cat_border">
-          <img src="Assets/catalogo/essentials600x600.jpg" class="img-fluid"  alt="Catalago5">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-      </div>
+  <section class="seccion_margen ">
+    <h2>Best Selling Collection</h2>
+  </section>
+
+  <section class="index_container_cat">
+    <div class="index_row_cat index_row_cat_inicial ">
+      <img src="Assets/catalogo/Bag600x600.jpg " class=" cata" alt="Catalago1">
+      <h5 class=" text-center ">Accesories</h5>
     </div>
+    <div class="index_row_cat ">
+      <img src="Assets/catalogo/CoffeCup600x600.jpg" class="" alt="Catalago2">
+      <h5 class=" text-center">Accesories</h5>
+    </div>
+    <div class="index_row_cat ">
+      <img src="Assets/catalogo/HandWatch600x600.jpg" class="" alt="Catalago3">
+      <h5 class=" text-center">Accesories</h5>
+    </div>
+    <div class="index_row_cat " >
+      <img src="Assets/catalogo/zapto600x600.jpg" class="" alt="Catalago4">
+      <h5 class=" text-center">Accesories</h5>
+    </div>
+    <div class="index_row_cat index_row_cat_ultimo ">
+      <img src="Assets/catalogo/essentials600x600.jpg" class="" alt="Catalago5">
+      <h5 class=" text-center">Accesories</h5>
+  </section>
+
+  <section class="seccion_margen ">
+    <h2>Trading Products</h2>
+  </section>
+
+  <section class="index_container_cat">
+    <div class="index_row_cat index_row_cat_inicial ">
+      <img src="Assets/catalogo/Bag600x600.jpg " class=" cata" alt="Catalago6">
+      <h5 class=" text-center ">Accesories</h5>
+    </div>
+    <div class="index_row_cat ">
+      <img src="Assets/catalogo/CoffeCup600x600.jpg" class="" alt="Catalago7">
+      <h5 class=" text-center">Accesories</h5>
+    </div>
+    <div class="index_row_cat ">
+      <img src="Assets/catalogo/HandWatch600x600.jpg" class="" alt="Catalago8">
+      <h5 class=" text-center">Accesories</h5>
+    </div>
+    <div class="index_row_cat " >
+      <img src="Assets/catalogo/zapto600x600.jpg" class="" alt="Catalago9">
+      <h5 class=" text-center">Accesories</h5>
+    </div>
+    <div class="index_row_cat index_row_cat_ultimo ">
+      <img src="Assets/catalogo/essentials600x600.jpg" class="" alt="Catalago10">
+      <h5 class=" text-center">Accesories</h5>
   </section>
 
 
-  <section>
-    <div class="container  ">
-      <div class="row index_category">
-        <h2>Best Selling Collection</h2>
-      </div>
-      <div class="row  ">
-        <div class="  col-sm-6 col-md index_cat_border2 ">
-  
-            <img src="Assets/catalogo/Bag600x600.jpg" class="img-fluid "   alt="Catalago1">
-            <h5 class=" text-center ">Accesories</h5>
-            
-        </div>
-        <div class=" col-sm-6 col-md  index_cat_border2">
-          <img src="Assets/catalogo/CoffeCup600x600.jpg" class="img-fluid"   alt="Catalago2">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-        <div class="col-sm-6 col-md index_cat_border2">
-          <img src="Assets/catalogo/HandWatch600x600.jpg" class="img-fluid"  alt="Catalago3">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-        <div class="col-sm-6 col-md index_cat_border2 ">
-          <img src="Assets/catalogo/zapto600x600.jpg" class="img-fluid"  alt="Catalago4">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-        <div class="col-sm-6 col-md index_cat_border2">
-          <img src="Assets/catalogo/essentials600x600.jpg" class="img-fluid"  alt="Catalago5">
-          <h5 class=" text-center">Accesories</h5>
-        </div>
-      </div>
-    </div>
+
+
+  <section class="seccion_margen">
+    <h2>UpComming Events</h2>
   </section>
 
+  <section class="index_container_events">
+    <div class="container__events">
+      <div class="caja">
+        <div class="date">
+          <h3>14</h3>
+          <h3>Jul</h3>
+        </div>
+        <div class="titulo">
+          <h3>FOOTBALL WORLD CUP SCREENING</h3>
+        </div>
+        <div class="hora">
+          <h3> <span> &#9201 </span> 23:00</h3>
+        </div>
+      </div>
 
-  <section class="container index_secctionEvents">
-    <div class="row index_category">
-          <h2>UpComming Events</h2>
-    </div>
+      <div class="caja">
+        <div class="date">
+          <h3>14</h3>
+          <h3>Jul</h3>
+        </div>
+        <div class="titulo">
+          <h3>FOOTBALL WORLD CUP SCREENING</h3>
+        </div>
+        <div class="hora">
+          <h3> <span> &#9201 </span> 23:00</h3>
+        </div>
+      </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <section class="container__events">
-
-          <div class="caja">
-            <div class="date">
-              <h3>14</h3>
-              <h3>Jul</h3>
-            </div>
-            <div class="titulo">
-              <h3>FOOTBALL WORLD CUP SCREENING</h3>
-            </div>
-            <div class="hora">
-              <h3> <span> &#9201 </span> 23:00</h3>
-            </div>
-          </div>
-
-          <div class="caja">
-            <div class="date">
-              <h3>14</h3>
-              <h3>Jul</h3>
-            </div>
-            <div class="titulo">
-              <h3>FOOTBALL WORLD CUP SCREENING</h3>
-            </div>
-            <div class="hora">
-              <h3> <span> &#9201 </span> 23:00</h3>
-            </div>
-          </div>
-
-          <div class="caja">
-            <div class="date">
-              <h3>14</h3>
-              <h3>Jul</h3>
-            </div>
-            <div class="titulo">
-              <h3>FOOTBALL WORLD CUP SCREENING</h3>
-            </div>
-            <div class="hora">
-              <h3> <span> &#9201 </span> 23:00</h3>
-            </div>
-          </div>
+      <div class="caja">
+        <div class="date">
+          <h3>14</h3>
+          <h3>Jul</h3>
+        </div>
+        <div class="titulo">
+          <h3>FOOTBALL WORLD CUP SCREENING</h3>
+        </div>
+        <div class="hora">
+          <h3> <span> &#9201 </span> 23:00</h3>
+        </div>
       </div>
     </div>
-  </section>
   </section>
 
 
   <footer>
-    <p>Logo</p>
-    <p>Categories</p>
-    <p>WriteUS</p>
-    <p>Quick Links</p>
+    <div class="seccion_margen ">
+      <p>Logo</p>
+      <p>Categories</p>
+      <p>WriteUS</p>
+      <p>Quick Links</p>
+    </div>
   </footer>
 
-    <!-- Inicio Model Viewer-->
-    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <!-- Fin Model Viewer-->
+  <!-- Inicio Model Viewer-->
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- Fin Model Viewer-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>

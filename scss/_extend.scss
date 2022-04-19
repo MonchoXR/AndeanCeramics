@@ -1,0 +1,24 @@
+.about_card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.about_card2{
+    
+    @extend .about_card1;
+
+}
+
+.about_card3{
+
+    @extend .about_card1;
+
+}
+
+.about_card4{
+    @extend .about_card1;
+
+}
