@@ -11,7 +11,9 @@ $cards:(
 
 @each $item, $color in $cards{
     .material-#{$item}{
+        
         color: $color;
+
         font-size: 40px !important;
         @media screen and (max-width: 160px) {
             font-size: 20px !important;
