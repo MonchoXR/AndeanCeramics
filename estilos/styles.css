@@ -5,46 +5,6 @@
 html {
   font-size: 62, 5%; }
 
-/***Mapa para el About.hmtl ****/
-.material-icons-red {
-  color: red;
-  font-size: 40px !important; }
-  @media screen and (max-width: 160px) {
-    .material-icons-red {
-      font-size: 20px !important; } }
-
-.material-icons-yellow {
-  color: yellow;
-  font-size: 40px !important; }
-  @media screen and (max-width: 160px) {
-    .material-icons-yellow {
-      font-size: 20px !important; } }
-
-.material-icons-pink {
-  color: pink;
-  font-size: 40px !important; }
-  @media screen and (max-width: 160px) {
-    .material-icons-pink {
-      font-size: 20px !important; } }
-
-.material-icons-blue {
-  color: blue;
-  font-size: 40px !important; }
-  @media screen and (max-width: 160px) {
-    .material-icons-blue {
-      font-size: 20px !important; } }
-
-.story2 p {
-  width: 80%;
-  font-size: 30px;
-  text-align: justify; }
-
-.about_card1, .about_card2, .about_card3, .about_card4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; }
-
 @keyframes Zoom {
   0% {
     transform: scale(0); }
@@ -59,11 +19,9 @@ html {
   50% {
     filter: blur(30px); } }
 
-header {
-  background-color: aqua; }
-  @media screen and (max-width: 576px) {
-    header nav div img {
-      width: 50%; } }
+@media screen and (max-width: 576px) {
+  header nav img {
+    width: 50%; } }
 
 .navbar-nav {
   display: flex;
@@ -84,7 +42,7 @@ footer {
     font-size: 30px; }
 
 .index__main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../Assets/BannerIndex.jpg");
+  background-image: linear-gradient(black, rgba(0, 0, 0, 0.1)), url("../Assets/BannerIndex.jpg");
   /* background-image: url("../Assets/Fondo2.jpg");    */
   background-attachment: fixed;
   background-position: center;
@@ -202,8 +160,8 @@ model-viewer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-image: url("../Assets/WhatsApp-logo.png");
   background-position: center;
   background-size: cover; }
@@ -379,12 +337,44 @@ model-viewer {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  @media screen and (max-width: 830px) {
-    .story2 p {
-      font-size: 20px; } }
+  .story2 p {
+    width: 80%;
+    font-size: 30px;
+    text-align: justify; }
+    @media screen and (max-width: 830px) {
+      .story2 p {
+        font-size: 20px; } }
+    @media screen and (max-width: 160px) {
+      .story2 p {
+        font-size: 10px; } }
+
+.material-icons-red {
+  color: red;
+  font-size: 40px !important; }
   @media screen and (max-width: 160px) {
-    .story2 p {
-      font-size: 10px; } }
+    .material-icons-red {
+      font-size: 20px !important; } }
+
+.material-icons-yellow {
+  color: yellow;
+  font-size: 40px !important; }
+  @media screen and (max-width: 160px) {
+    .material-icons-yellow {
+      font-size: 20px !important; } }
+
+.material-icons-pink {
+  color: pink;
+  font-size: 40px !important; }
+  @media screen and (max-width: 160px) {
+    .material-icons-pink {
+      font-size: 20px !important; } }
+
+.material-icons-blue {
+  color: blue;
+  font-size: 40px !important; }
+  @media screen and (max-width: 160px) {
+    .material-icons-blue {
+      font-size: 20px !important; } }
 
 .about_cards {
   display: grid;
@@ -526,103 +516,29 @@ model-viewer {
 .cartProducto p {
   text-align: center; }
 
-@media screen and (max-width: 1500px) {
-  .cards div {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .cards {
-    gap: 0% 0%; }
-  .card1 p {
-    text-align: center; }
-  .card2 p {
-    text-align: center; }
-  .card3 p {
-    text-align: center; }
-  .card4 p {
-    text-align: center; }
-  .tituloProducto h1 {
-    font-size: 25px; } }
-
-@media screen and (max-width: 830px) {
-  .banner__producto h1 {
-    color: white;
-    font-size: 30px; }
-  .tituloProducto h1 {
-    font-size: 22px; }
-  .precioProducto p {
-    font-size: 18px; }
-  .cartProducto p {
-    font-size: 18px; } }
-
-@media screen and (max-width: 600px) {
-  .info {
-    grid-area: info;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .tituloContacto h1 {
-    font-size: 25px; }
-  .tituloContacto h4 {
-    font-size: 16px; }
-  .visit h2 {
-    font-size: 20px; }
-  .visit h4 {
-    font-size: 12px; }
-  .talk h2 {
-    font-size: 20px; }
-  .talk h4 {
-    font-size: 12px; }
-  .working h2 {
-    font-size: 20px; }
-  .working .working h4 {
-    font-size: 12px; }
-  textarea {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%; } }
-
-@media screen and (max-width: 320px) {
-  .banner__producto h1 {
-    font-size: 25px; }
-  .tituloProducto h1 {
-    font-size: 25px; }
-  .precioProducto p {
-    font-size: 20px; }
-  .cartProducto p {
-    font-size: 20px; }
-  .imagenProducto img {
-    width: 100%;
-    height: 100%; } }
-
-.container__blog {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 0% 0%;
-  grid-auto-flow: row;
-  grid-template-areas: ". ."; }
-
 .banner__blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; }
   .banner__blog h1 {
     color: white;
     font-size: 40px; }
 
-.search_blog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  .search_blog h2 {
-    border-bottom: dashed; }
+.container__blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas: ". .";
+  margin: 20px 0; }
 
 .post__blog {
   display: grid;
@@ -648,9 +564,8 @@ model-viewer {
   border-bottom: solid black;
   border-left: solid black;
   border-right: solid black; }
-
-.titulo__post h1 {
-  text-align: center; }
+  .titulo__post h1 {
+    text-align: center; }
 
 .fecha__post {
   grid-area: fecha__post;
@@ -673,24 +588,25 @@ model-viewer {
   background-color: rgba(128, 128, 128, 0.342);
   color: white; }
 
-@media screen and (max-width: 320px) {
-  .banner__blog h1 {
-    font-size: 25px; }
-  .titulo__post h2 {
-    font-size: 20px; }
-  .fecha__post p {
-    font-size: 15px; }
-  .button__post p {
-    font-size: 15px; } }
+.search_blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .search_blog h2 {
+    border-bottom: dashed; }
 
 .mapa {
   height: 600px; }
 
-.info {
-  grid-area: info;
+.contact_info {
   display: flex;
   justify-content: center; }
-  .info div {
+  @media screen and (max-width: 768px) {
+    .contact_info {
+      flex-direction: column;
+      align-items: center; } }
+  .contact_info .visit, .contact_info .talk, .contact_info .working {
     width: 280px;
     height: 150px;
     background-color: white;
@@ -699,129 +615,13 @@ model-viewer {
     justify-content: center;
     align-items: center;
     margin-top: -50px; }
-
-.visit h2 {
-  font-size: 25px; }
-
-.visit h4 {
-  font-size: 16px; }
-
-.talk h2 {
-  font-size: 25px; }
-
-.talk h4 {
-  font-size: 16px; }
-
-.working h2 {
-  font-size: 25px; }
-
-.working h4 {
-  font-size: 16px; }
-
-.contacto {
-  grid-area: Contacto;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap; }
+    @media screen and (max-width: 768px) {
+      .contact_info .visit, .contact_info .talk, .contact_info .working {
+        margin-top: inherit;
+        border-bottom: 1px solid; } }
 
 .tituloContacto {
-  grid-area: titulo;
-  width: 90%;
-  margin: 30px auto; }
-  .tituloContacto h1 {
-    font-size: 30px; }
-  .tituloContacto h4 {
-    font-size: 18px; }
-
-.imagenContacto {
-  grid-area: imagenContacto;
-  display: flex;
-  justify-content: center; }
-  .imagenContacto img {
-    width: 80%;
-    height: auto; }
-
-@media screen and (max-width: 1500px) {
-  .imagenContacto {
-    width: 100%; }
-  .contacto_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  textarea {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%; } }
-
-@media screen and (max-width: 600px) {
-  .info {
-    grid-area: info;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .tituloContacto h1 {
-    font-size: 25px; }
-  .tituloContacto h4 {
-    font-size: 16px; }
-  .visit h2 {
-    font-size: 20px; }
-  .visit h4 {
-    font-size: 12px; }
-  .talk h2 {
-    font-size: 20px; }
-  .talk h4 {
-    font-size: 12px; }
-  .working h2 {
-    font-size: 20px; }
-  .working h4 {
-    font-size: 12px; }
-  textarea {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%; } }
-
-@media screen and (max-width: 320px) {
-  .tituloContacto h1 {
-    font-size: 20px; }
-  .tituloContacto h4 {
-    font-size: 12px; }
-  .visit h2 {
-    font-size: 15px; }
-  .visit h4 {
-    font-size: 10px; }
-  .talk h2 {
-    font-size: 15px; }
-  .talk h4 {
-    font-size: 10px; }
-  .working h2 {
-    font-size: 15px; }
-  .working h4 {
-    font-size: 10px; }
-  .info div {
-    width: 160px;
-    height: 200px;
-    background-color: white;
-    /* border-style: dashed; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -50px; }
-  input {
-    width: 100%;
-    padding: 0px;
-    border: 1px solid black;
-    -webkit-box-sizing: border-box;
-    /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;
-    /* Firefox, other Gecko */
-    box-sizing: border-box;
-    /* Opera/IE 8+ */
-    font-size: 5px; }
-  label {
-    font-size: 5px; } }
+  margin: 3% auto; }
+  @media screen and (max-width: 768px) {
+    .tituloContacto {
+      margin-top: 10%; } }

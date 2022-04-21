@@ -1,26 +1,4 @@
 
-/***Mapa para el About.hmtl ****/
-
-$cards:(
-    icons-red:red, 
-    icons-yellow:yellow, 
-    icons-pink:pink, 
-    icons-blue:blue
-    );
-
-
-@each $item, $color in $cards{
-    .material-#{$item}{
-        
-        color: $color;
-
-        font-size: 40px !important;
-        @media screen and (max-width: 160px) {
-            font-size: 20px !important;
-        }
-    }
-}
-
 
 $estilos:(
     ancho:80%,
@@ -28,10 +6,9 @@ $estilos:(
     centro: justify,
 );
 
-.story2 {
-    p{
-        width: map-get($estilos , ancho);
-        font-size: map-get($estilos , tfuente );
-        text-align: map-get($estilos , centro );
-    }
-}
+$cards:(
+    icons-red:red, 
+    icons-yellow:yellow, 
+    icons-pink:pink, 
+    icons-blue:blue
+    );

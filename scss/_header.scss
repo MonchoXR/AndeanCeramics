@@ -1,15 +1,11 @@
 header{
-    background-color: aqua;
-    nav{
-    
-        div{
+  
 
-     
-            img{
-                @media screen and (max-width: 576px) {
-                  
-                 width: 50%;
-                }
+    nav{
+        img{
+            @media screen and (max-width: 576px) {
+              
+             width: 50%;
             }
         }
     }

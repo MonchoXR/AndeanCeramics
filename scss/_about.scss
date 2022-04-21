@@ -77,6 +77,8 @@
 
 }
 
+
+
 .story2 {
 
     display: flex;
@@ -86,6 +88,11 @@
 
 
     p {
+
+        width: map-get($estilos , ancho);
+        font-size: map-get($estilos , tfuente );
+        text-align: map-get($estilos , centro );
+
         @media screen and (max-width: 830px) {
             font-size: 20px;
         }
@@ -95,6 +102,20 @@
     }
 
 }
+
+
+@each $item, $color in $cards{
+    .material-#{$item}{
+        
+        color: $color;
+
+        font-size: 40px !important;
+        @media screen and (max-width: 160px) {
+            font-size: 20px !important;
+        }
+    }
+}
+
 .about_cards {
     display: grid;
     
@@ -128,6 +149,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    
 
     @media screen and (max-width: 320px) {
         align-items: center;
@@ -146,9 +168,12 @@
         }
     }
 }
+
+
 .about_card2{
 
     grid-area: card2;
+    @extend .about_card1;
 
 
     @media screen and (max-width: 320px) {
@@ -174,6 +199,7 @@
 .about_card3 {
    
     grid-area: card3;
+    @extend .about_card1;
 
     @media screen and (max-width: 320px) {
         align-items: center;
@@ -197,6 +223,8 @@
 .about_card4 {
  
     grid-area: card4;
+    @extend .about_card1;
+
 
 
     @media screen and (max-width: 320px) {

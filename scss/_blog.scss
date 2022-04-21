@@ -1,8 +1,30 @@
 
+ .banner__blog {
+ 
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 500px;
+
+   h1 {
+    color: white;
+    font-size: 40px;
+    }
+
+}
+
+ 
  .container__blog {
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr  ;
+    grid-template-rows: 1fr  ;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 0% 0%;
@@ -11,33 +33,8 @@
         
         ". .";
 
-
+    margin: 20px 0;
 }
-
-.banner__blog {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    h1 {
-        color: white;
-        font-size: 40px;
-    }
-
-}
-
-.search_blog{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h2{
-        border-bottom: dashed;
-    }
-}
-
 
 
 .post__blog {
@@ -74,13 +71,17 @@
     align-items: center;
     border-bottom: solid black ;
     border-left: solid black ;
-    border-right: solid black ;;
-    
-}
+    border-right: solid black ;
 
-.titulo__post h1 {
-    text-align: center;
-}
+    h1 {
+        text-align: center;
+    }
+    
+} 
+
+
+
+
 
 .fecha__post {
     grid-area: fecha__post;
@@ -108,37 +109,15 @@
 }
 
 
+.search_blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-@media screen and (max-width: 320px) {
-
-
-
-    .banner__blog {
-        h1 {
-
-            font-size: 25px;
-        }
+    h2{
+        border-bottom: dashed;
     }
-
-    .titulo__post {
-        h2 {
-            font-size: 20px;
-        }
-    }
-
-    .fecha__post {
-        p {
-            font-size: 15px;
-        }
-    }
-
-    .button__post{
-        p {
-            font-size: 15px;
-        }
-    }
-
-
-
 }
+
 
