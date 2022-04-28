@@ -170,37 +170,31 @@ model-viewer {
   max-width: 1920px;
   width: 80%;
   margin: 2% auto;
-  margin-bottom: inherit; }
+  margin-bottom: inherit;
+  outline: 0; }
 
-.index_container_cat {
+.row_cat {
   max-width: 1920px;
   width: 80%;
   margin: 0 auto;
   display: flex; }
   @media screen and (max-width: 992px) {
-    .index_container_cat {
+    .row_cat {
       flex-wrap: wrap;
       justify-content: space-between; } }
-  .index_container_cat .index_row_cat {
+  .row_cat .col_cat {
     outline: 1px solid #eeeeee;
-    margin: 0 0.5%;
-    animation: Zoom;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: once; }
-    .index_container_cat .index_row_cat img {
+    margin: 0 0.5%; }
+    .row_cat .col_cat img {
       width: 100%;
       height: auto; }
-      .index_container_cat .index_row_cat img:hover {
-        transform: scale(1.1);
-        transition: all 1s; }
     @media screen and (max-width: 992px) {
-      .index_container_cat .index_row_cat {
+      .row_cat .col_cat {
         width: 49%;
         margin: 0.5% 0.5%; } }
-  .index_container_cat .index_row_cat_inicial {
+  .row_cat .col_cat_inicial {
     margin-left: inherit; }
-  .index_container_cat .index_row_cat_ultimo {
+  .row_cat .col_cat_ultimo {
     margin-right: inherit; }
 
 .index_container_events {
@@ -455,66 +449,131 @@ model-viewer {
       .about_card4 p {
         font-size: 8px; } }
 
+.prod_color {
+  background-color: #f4f2f2; }
+
 .banner__producto {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
+  background-image: url("../Assets/Fondo2.jpg");
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px; }
+  height: 400px; }
   .banner__producto h1 {
     color: white;
     font-size: 40px; }
 
-.cajaProducto {
-  display: grid;
-  grid-template-columns: 0.4fr 0.4fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "imagenProducto imagenProducto" "imagenProducto imagenProducto" "imagenProducto imagenProducto" "tituloProducto tituloProducto" "precioProducto cartProducto";
-  justify-content: center; }
-
-.imagenProducto {
-  grid-area: imagenProducto; }
-
-.imagenStory {
-  animation: Zoom;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: once; }
-  .imagenStory img {
-    width: 100%;
-    height: 100%; }
-    .imagenStory img:hover {
-      transform: scale(1.1);
-      transition: all 1s; }
-
-.tituloProducto {
-  grid-area: tituloProducto;
+.container_prod {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0; }
+  @media screen and (max-width: 992px) {
+    .container_prod {
+      flex-direction: column; } }
+  .container_prod .row_cat_prod {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    outline: 1px solid #eeeeee;
+    background-color: white; }
+    .container_prod .row_cat_prod .col_cat_prod {
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+      margin: 2% 2%;
+      width: 26%;
+      position: relative; }
+      .container_prod .row_cat_prod .col_cat_prod img {
+        width: 100%;
+        height: auto; }
+      @media screen and (max-width: 992px) {
+        .container_prod .row_cat_prod .col_cat_prod {
+          width: 46%; } }
+      @media screen and (max-width: 768px) {
+        .container_prod .row_cat_prod .col_cat_prod {
+          width: 80%; } }
+  .container_prod .sale_produc {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 14px; }
+
+.prod_cart {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: cornflowerblue; }
+  padding: 15px 10px; }
+  .prod_cart .prod_price {
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 1400px) {
+      .prod_cart .prod_price {
+        width: 100%;
+        flex-wrap: wrap; } }
+    @media screen and (max-width: 992px) {
+      .prod_cart .prod_price {
+        width: inherit;
+        flex-wrap: inherit; } }
+    @media screen and (max-width: 576px) {
+      .prod_cart .prod_price {
+        width: 100%;
+        flex-wrap: wrap; } }
+  .prod_cart .prod_priceBefore {
+    text-decoration: line-through; }
+  .prod_cart .prod_priceCurrently {
+    margin-left: 2%;
+    font-size: 1.1em;
+    color: red; }
+  .prod_cart .prod_addCart {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center; }
 
-.precioProducto {
-  grid-area: precioProducto;
-  background-color: aquamarine;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.cartProducto {
-  grid-area: cartProducto;
-  background-color: coral;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.cartProducto p {
-  text-align: center; }
+.prod_segundaSeccion {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin-left: 3%;
+  padding: 2% 3%;
+  background-color: white; }
+  @media screen and (max-width: 992px) {
+    .prod_segundaSeccion {
+      margin-left: inherit;
+      margin-top: 3%; } }
+  .prod_segundaSeccion div .prod_cajaDetalle {
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 992px) {
+      .prod_segundaSeccion div .prod_cajaDetalle {
+        width: 100%;
+        justify-content: start; } }
+    .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra {
+      padding-right: 5%; }
+      @media screen and (max-width: 992px) {
+        .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra {
+          display: flex;
+          justify-content: flex-end;
+          width: 30%; } }
+      .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra img {
+        width: 100%; }
+        @media screen and (max-width: 1400px) {
+          .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra img {
+            width: 60px; } }
+        @media screen and (max-width: 992px) {
+          .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra img {
+            width: 100%; } }
+    .prod_segundaSeccion div .prod_cajaDetalle div {
+      width: 100%;
+      margin-bottom: 5%; }
 
 .banner__blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
