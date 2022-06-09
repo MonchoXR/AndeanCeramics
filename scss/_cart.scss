@@ -1,0 +1,72 @@
+.banner__cart {
+ 
+
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../Assets/Fondo2.jpg");    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     height: 400px;
+  
+     h1 {
+      color: white;
+      font-size: 40px;
+      }
+  
+  }
+  
+
+  
+  .cart_segundaSeccion{
+
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+    // background-color: red;
+    padding: 40px 0;
+    
+  } 
+
+
+.cuadrar{
+    display: flex;
+    align-items: center;
+
+    // align-content: center;
+    // justify-content: center;
+     height: 10vh;
+         // text-align: justify;
+    
+}
+
+
+.cartImagen {
+    // width: 100%;
+    width: 80px;
+    // ma  
+}
+
+.eliminarCart {
+
+      background-color: rgba(255, 255, 255, 0.800);
+      color: red;
+    
+      width: 20px;
+      font-size: 10x;
+      text-align: center;
+      border-radius: 10px;
+      // font-weight: 500;
+
+      &:hover {
+
+          background-color: rgba(255, 0, 0, 0.952);
+          color: white;
+          border-radius: 10px;
+          //  line-height: 1.2;
+          font-weight: 750;
+      }
+  }

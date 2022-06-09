@@ -1,0 +1,98 @@
+.bag_container{
+    display: flex;
+    // flex-direction: column;
+    justify-content: start;
+    // background-color: aqua;
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.bag_row_1{
+    width: 50%;
+    // background-color: antiquewhite;
+
+    img{
+    width: 100%;
+    }
+}
+
+.bag_row_2{
+
+    width: 50%;
+    // background-color:gainsboro;
+    padding-left: 50px;
+
+    .bag_col_title{
+        font-size:xx-large;
+        // text-align: center;
+        // color: white;
+
+    }
+
+    .bag_col_id{
+    
+        // color: white;
+    }
+
+
+    .bag_col_precio{
+       font-size: larger;
+        // color: white;
+        margin-bottom: 3%;
+        
+    }
+
+    .bag_col_color{
+        // text-align: center;
+        // color: white;
+        margin-bottom: 3%;
+    }
+    
+    
+    .bag_col_cantidad{
+        // text-align: center;
+        // color: white;
+        margin-bottom: 3%;
+    }
+
+    .bag_col_addCart{
+        
+        // color: white;
+        margin-bottom: 3%;
+    }
+
+
+    .bag_col_Detalles{
+        
+        font-size: large;
+        // color: white;
+        margin-bottom: 1%;
+    }
+
+    .bag_col_frase{
+        
+        // color: white;
+        
+    }
+ 
+}
+
+model-viewer{
+
+    width: 100%;
+    height: 100vh;
+
+    animation: Blur;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: once;
+
+    @media screen and (max-width: 992px) {
+      
+        width: 100%;
+        height: 40vh;
+      
+    }
+}
