@@ -295,3 +295,61 @@
   }
 
 }
+
+
+.eliminarCarrito1{
+  position:absolute;
+  top:0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.800);
+  color: red;
+  padding-top: 0;
+  padding-bottom: 1px;
+  padding-left: 7px;
+  padding-right: 7px;
+  //  margin: 0px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
+  
+  
+  &:hover {
+
+    background-color: rgba(255, 0, 0, 0.952);
+    color: white;
+    border-radius: 10px;
+    //  line-height: 1.2;
+    font-weight: 750;
+  }
+
+}
+
+
+.eliminarCarrito2{
+  position:absolute;
+  top:0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.800);
+  color: red;
+  padding-top: 0;
+  padding-bottom: 1px;
+  padding-left: 7px;
+  padding-right: 7px;
+  //  margin: 0px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
+  
+  
+  &:hover {
+
+    background-color: rgba(255, 0, 0, 0.952);
+    color: white;
+    border-radius: 10px;
+    //  line-height: 1.2;
+    font-weight: 750;
+  }
+
+}
