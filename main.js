@@ -15,20 +15,12 @@ class Carrito {
 		this.articulos = articulos
 	}
 	
-	addItem(articulo) {
-		// Verificar si ya esta en el carrito
-		// Si existe, aumento en uno la cantidad
-		// Si no existe, pusheo al array de articulos
-	
-	
+	addItem(articulo) {	
 		this.articulos.push(articulo)
 	}
 	
 	removeItem(articulo) {
-		// Verificar que el articulo este dentro del array de articulos
-		// find al articulo  y sacarlo
-		// console.log(`Supuestamente sacamos ${articulo.nombre}`)
-        console.log("mi articulo id es: "+articulo.id);
+
 		const index = this.articulos.findIndex((a) => a.id === articulo.id);
 		this.articulos.splice(index, 1);
 
@@ -58,7 +50,8 @@ productos.push(new Producto(2,"Leather Watch",40,3,"../Assets/catalogo/HandWatch
 console.log(productos)
 
 let seccion = document.querySelector(".row_cat_prod") //me toma solo el primer elemento que coincidad
-let seccion2 = document.querySelector(".primerArticuloJS") 
+let cabecera = document.querySelector(".primerArticuloJS") 
+
 // console.log(seccion)
 
 
@@ -118,7 +111,7 @@ for (let i = 0; i < cards.length; i++) {
          div2.innerHTML =`
                 <div class="prod_imgCompra">
                     <img src=${productos[i].img} class="" alt="Catalago3">
-                    <div class="eliminarCarrito"> x </div>
+                    <div id="eliminarCarrito${productos[i].id}"> x </div>
                 </div>
                 <div>
                  <span>${productos[i].nombre}</span></br>
@@ -126,41 +119,28 @@ for (let i = 0; i < cards.length; i++) {
              
                 </div>
                 `
-        seccion2.append(div2);       
+        cabecera.append(div2);       
 
-        // localStorage.setItem("carrito", JSON.stringify(carrito.articulos));
+      
+        /**evento eliminar */  
+        let delbtn = document.getElementById(`eliminarCarrito${productos[i].id}`)
+        console.log(delbtn);
+        delbtn.onclick=()=> {
+            console.log("elimina producto --> " + productos[i].id  + " " + productos[i].nombre);
+            carrito.removeItem(productos[i]);
+      
 
-        /********Eliminar *********/
-        let delbtn = document.getElementsByClassName("eliminarCarrito");
-        let div3 = document.getElementsByClassName("prod_cajaDetalle");
-
-        for (let j=0; j< delbtn.length; j++){
-             
-            delbtn[j].onclick=()=> {
-    
-            console.log(j);
-          
-         
-            console.log("elimina producto --> " + carrito.articulos[j].id);
-             carrito.removeItem(carrito.articulos[j]);
-                
-    
-            seccion2.removeChild(div3[j]);
-            div3.innerHTML =``; 
+            cabecera.removeChild(div2);
+            console.log(carrito);
+        }
         
-          
-             console.log(carrito);
-            }
-        } 
-              
-
-               
-
-
-            
                 
      }
+    
+    }
 
 
-}
-            
+     
+
+
+      

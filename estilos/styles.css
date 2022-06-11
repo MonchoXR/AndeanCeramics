@@ -602,7 +602,7 @@ model-viewer {
       .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra img {
         width: 100%; }
 
-.eliminarCarrito {
+#eliminarCarrito0 {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -616,13 +616,13 @@ model-viewer {
   text-align: center;
   border-radius: 10px;
   font-weight: 500; }
-  .eliminarCarrito:hover {
+  #eliminarCarrito0:hover {
     background-color: rgba(255, 0, 0, 0.952);
     color: white;
     border-radius: 10px;
     font-weight: 750; }
 
-.eliminarCarrito1 {
+#eliminarCarrito1 {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -636,13 +636,13 @@ model-viewer {
   text-align: center;
   border-radius: 10px;
   font-weight: 500; }
-  .eliminarCarrito1:hover {
+  #eliminarCarrito1:hover {
     background-color: rgba(255, 0, 0, 0.952);
     color: white;
     border-radius: 10px;
     font-weight: 750; }
 
-.eliminarCarrito2 {
+#eliminarCarrito2 {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -656,7 +656,7 @@ model-viewer {
   text-align: center;
   border-radius: 10px;
   font-weight: 500; }
-  .eliminarCarrito2:hover {
+  #eliminarCarrito2:hover {
     background-color: rgba(255, 0, 0, 0.952);
     color: white;
     border-radius: 10px;
