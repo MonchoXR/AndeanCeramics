@@ -3,7 +3,7 @@ class Producto {
 		this.id = id; 
 		this.nombre = nombre;
         this.precio =  precio;
-		this.cantidad = cantidad;
+		this.cantidad = parseInt(cantidad);
 		this.img = img;
 	}
 }
@@ -16,7 +16,27 @@ class Carrito {
 	}
 	
 	addItem(articulo) {	
-		this.articulos.push(articulo)
+   
+
+
+        const encuentra = this.articulos.some((e)=> e.id === articulo.id);
+        console.log(encuentra);
+        if(encuentra){
+            
+            this.articulos.forEach((num)=>{ 
+                num.cantidad++;})
+
+        }
+        else{
+            console.log(articulo.id);
+            this.articulos.push(articulo);
+
+            this.articulos.forEach((num)=>{ 
+                if(num.cantidad == 0)
+                num.cantidad=1;})
+        }
+    
+
 	}
 	
 	removeItem(articulo) {
@@ -43,9 +63,9 @@ let carrito = new Carrito()
 
 
 let productos = []
-productos.push(new Producto(0,"kero", 40,3,"../Assets/catalogo/kero2.png"))
-productos.push(new Producto(1,"Coffe Cup", 40,3,"../Assets/catalogo/CoffeCup600x600.jpg"))
-productos.push(new Producto(2,"Leather Watch",40,3,"../Assets/catalogo/HandWatch600x600.jpg"))
+productos.push(new Producto(0,"kero", 40,0,"../Assets/catalogo/kero2.png"))
+productos.push(new Producto(1,"Coffe Cup", 40,0,"../Assets/catalogo/CoffeCup600x600.jpg"))
+productos.push(new Producto(2,"Leather Watch",40,0,"../Assets/catalogo/HandWatch600x600.jpg"))
 
 console.log(productos)
 
@@ -98,15 +118,15 @@ for (let i = 0; i < cards.length; i++) {
             // Boton de agregar
     cards[i].onclick = () => {
 
-         // console.log("añadir producto --> " + productos[i].nombre);
 
+    
         carrito.addItem(productos[i]);
         console.log(carrito);
 
 
-
         let div2 = document.createElement("div")
          div2.classList.add("prod_cajaDetalle")
+         
 
          div2.innerHTML =`
                 <div class="prod_imgCompra">
@@ -119,18 +139,22 @@ for (let i = 0; i < cards.length; i++) {
              
                 </div>
                 `
-        cabecera.append(div2);       
-
+            
+                cabecera.append(div2);
+                
+                
+        // }
       
         /**evento eliminar */  
         let delbtn = document.getElementById(`eliminarCarrito${productos[i].id}`)
-        console.log(delbtn);
+
         delbtn.onclick=()=> {
-            console.log("elimina producto --> " + productos[i].id  + " " + productos[i].nombre);
+
             carrito.removeItem(productos[i]);
       
 
             cabecera.removeChild(div2);
+       
             console.log(carrito);
         }
         
