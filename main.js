@@ -20,7 +20,6 @@ class Carrito {
 
 
         const encuentra = this.articulos.some((e)=> e.id === articulo.id);
-        console.log(encuentra);
         if(encuentra){
             
             this.articulos.forEach((num)=>{ 
@@ -28,7 +27,7 @@ class Carrito {
 
         }
         else{
-            console.log(articulo.id);
+          
             this.articulos.push(articulo);
 
             this.articulos.forEach((num)=>{ 
