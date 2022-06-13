@@ -17,12 +17,13 @@ class Carrito {
 	
 	addItem(articulo) {	
    
-
-
+      
+        // console.log(this.articulos);
         const encuentra = this.articulos.some((e)=> e.id === articulo.id);
         if(encuentra){
             
             this.articulos.forEach((num)=>{ 
+                if(num.id == articulo.id)
                 num.cantidad++;})
 
         }
@@ -110,60 +111,56 @@ for (let producto of productos) {
 }
 
  let cards = document.getElementsByClassName("prod_addCart");
+ let div2 = document.createElement("div")
 
-
+   // Boton de agregar
 
 for (let i = 0; i < cards.length; i++) {
-            // Boton de agregar
+         
     cards[i].onclick = () => {
 
-
-    
         carrito.addItem(productos[i]);
-        console.log(carrito);
-
-
-        let div2 = document.createElement("div")
-         div2.classList.add("prod_cajaDetalle")
-         
-
-         div2.innerHTML =`
-                <div class="prod_imgCompra">
-                    <img src=${productos[i].img} class="" alt="Catalago3">
-                    <div id="eliminarCarrito${productos[i].id}"> x </div>
-                </div>
-                <div>
-                 <span>${productos[i].nombre}</span></br>
-                <span>${productos[i].cantidad} x $${productos[i].precio}</span>
-             
-                </div>
-                `
+        console.log(carrito);    
+        console.log(productos[i].cantidad);
+       
+   
+        
+        if(productos[i].cantidad >1)
+        {
+            // NOSE COMO MANTENER EL DOM SIN AGREGAR UNO NUEVO
             
-                cabecera.append(div2);
-                
-                
-        // }
-      
+        }
+
+        else
+        {
+         div2.innerHTML +=`
+        <div class="prod_cajaDetalle">
+            <div class="prod_imgCompra">
+                <img src=${productos[i].img} class="" alt="Catalago3">
+                <div id="eliminarCarrito${productos[i].id}"> x </div>
+            </div>
+            <div>
+            <span>${productos[i].nombre}</span></br>
+            <span>${productos[i].cantidad} x $${productos[i].precio}</span>
+            </div>
+        </div>
+          `     
+         cabecera.append(div2);
+        }  
+
+        
         /**evento eliminar */  
         let delbtn = document.getElementById(`eliminarCarrito${productos[i].id}`)
 
-        delbtn.onclick=()=> {
-
+        delbtn.onclick=()=> 
+        {
             carrito.removeItem(productos[i]);
-      
-
             cabecera.removeChild(div2);
-       
             console.log(carrito);
-        }
-        
-                
+         }
+              
      }
     
     }
 
 
-     
-
-
-      
