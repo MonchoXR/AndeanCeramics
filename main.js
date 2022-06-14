@@ -22,10 +22,19 @@ class Carrito {
         const encuentra = this.articulos.some((e)=> e.id === articulo.id);
         if(encuentra){
             
-            this.articulos.forEach((num)=>{ 
-                if(num.id == articulo.id)
-                num.cantidad++;})
+            this.articulos.forEach((e)=>{ 
+                if(e.id == articulo.id){
+                e.cantidad++;
 
+                let cant = document.getElementsByClassName("prd_cant") 
+             
+                 let index = this.articulos.findIndex((i)=> i.id == articulo.id)
+              
+                 cant[index].innerText = e.cantidad;
+                }
+
+            })
+   
         }
         else{
           
@@ -34,7 +43,42 @@ class Carrito {
             this.articulos.forEach((num)=>{ 
                 if(num.cantidad == 0)
                 num.cantidad=1;})
-        }
+
+
+                      
+
+        let div2 = document.createElement("div")
+        div2.classList.add("prod_cajaDetalle");
+
+            div2.innerHTML +=`
+     
+            <div class="prod_imgCompra">
+                <img src=${articulo.img} class="" alt="Catalago3">
+                <div id="eliminarCarrito${articulo.id}"> x </div>
+            </div>
+            <div>
+                <span>${ articulo.nombre}</span></br>
+                <span class="prd_cant">${articulo.cantidad}</span> <span>x $${articulo.precio}</span>
+            </div>
+   
+          `    
+     
+         cabecera.append(div2);
+  
+ 
+        
+        /**evento eliminar */  
+        let delbtn = document.getElementById(`eliminarCarrito${articulo.id}`)
+
+        delbtn.onclick=()=> 
+        {
+            carrito.removeItem(articulo);
+            cabecera.removeChild(div2);
+            console.log(carrito);
+         }
+              
+     }
+        
     
 
 	}
@@ -66,6 +110,7 @@ let productos = []
 productos.push(new Producto(0,"kero", 40,0,"../Assets/catalogo/kero2.png"))
 productos.push(new Producto(1,"Coffe Cup", 40,0,"../Assets/catalogo/CoffeCup600x600.jpg"))
 productos.push(new Producto(2,"Leather Watch",40,0,"../Assets/catalogo/HandWatch600x600.jpg"))
+
 
 console.log(productos)
 
@@ -111,7 +156,6 @@ for (let producto of productos) {
 }
 
  let cards = document.getElementsByClassName("prod_addCart");
- let div2 = document.createElement("div")
 
    // Boton de agregar
 
@@ -120,44 +164,39 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].onclick = () => {
 
         carrito.addItem(productos[i]);
-        console.log(carrito);    
-        console.log(productos[i].cantidad);
-       
+        console.log(carrito);         
    
         
-        if(productos[i].cantidad >1)
-        {
-            // NOSE COMO MANTENER EL DOM SIN AGREGAR UNO NUEVO
-            
-        }
 
-        else
-        {
-         div2.innerHTML +=`
-        <div class="prod_cajaDetalle">
-            <div class="prod_imgCompra">
-                <img src=${productos[i].img} class="" alt="Catalago3">
-                <div id="eliminarCarrito${productos[i].id}"> x </div>
-            </div>
-            <div>
-            <span>${productos[i].nombre}</span></br>
-            <span>${productos[i].cantidad} x $${productos[i].precio}</span>
-            </div>
-        </div>
-          `     
-         cabecera.append(div2);
-        }  
+    //     let div2 = document.createElement("div")
+    //     div2.classList.add("prod_cajaDetalle");
 
+    //         div2.innerHTML +=`
+     
+    //         <div class="prod_imgCompra">
+    //             <img src=${productos[i].img} class="" alt="Catalago3">
+    //             <div id="eliminarCarrito${productos[i].id}"> x </div>
+    //         </div>
+    //         <div>
+    //             <span>${productos[i].nombre}</span></br>
+    //             <span>${productos[i].cantidad} x $${productos[i].precio}</span>
+    //         </div>
+   
+    //       `    
+     
+    //      cabecera.append(div2);
+    //      console.log(cabecera);
+ 
         
-        /**evento eliminar */  
-        let delbtn = document.getElementById(`eliminarCarrito${productos[i].id}`)
+    //     /**evento eliminar */  
+    //     let delbtn = document.getElementById(`eliminarCarrito${productos[i].id}`)
 
-        delbtn.onclick=()=> 
-        {
-            carrito.removeItem(productos[i]);
-            cabecera.removeChild(div2);
-            console.log(carrito);
-         }
+    //     delbtn.onclick=()=> 
+    //     {
+    //         carrito.removeItem(productos[i]);
+    //         cabecera.removeChild(div2);
+    //         console.log(carrito);
+    //      }
               
      }
     
