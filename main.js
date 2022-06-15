@@ -17,20 +17,20 @@ class Carrito {
 	
 	addItem(articulo) {	
    
-      
+     
         // console.log(this.articulos);
         const encuentra = this.articulos.some((e)=> e.id === articulo.id);
         if(encuentra){
             
             this.articulos.forEach((e)=>{ 
                 if(e.id == articulo.id){
-                e.cantidad++;
+                 e.cantidad++;
 
                 let cant = document.getElementsByClassName("prd_cant") 
              
                  let index = this.articulos.findIndex((i)=> i.id == articulo.id)
               
-                 cant[index].innerText = e.cantidad;
+                 cant[index].innerText =  e.cantidad;
                 }
 
             })
@@ -74,6 +74,15 @@ class Carrito {
         {
             carrito.removeItem(articulo);
             cabecera.removeChild(div2);
+
+            
+            
+        console.log(delbtn.parentElement.parentElement.children[1].children[2].innerText);
+        // delbtn.parentElement.parentElement.children[1].children[2].innerText = 0;
+        // conta=0;
+    
+
+
             console.log(carrito);
          }
               
@@ -166,37 +175,7 @@ for (let i = 0; i < cards.length; i++) {
         carrito.addItem(productos[i]);
         console.log(carrito);         
    
-        
 
-    //     let div2 = document.createElement("div")
-    //     div2.classList.add("prod_cajaDetalle");
-
-    //         div2.innerHTML +=`
-     
-    //         <div class="prod_imgCompra">
-    //             <img src=${productos[i].img} class="" alt="Catalago3">
-    //             <div id="eliminarCarrito${productos[i].id}"> x </div>
-    //         </div>
-    //         <div>
-    //             <span>${productos[i].nombre}</span></br>
-    //             <span>${productos[i].cantidad} x $${productos[i].precio}</span>
-    //         </div>
-   
-    //       `    
-     
-    //      cabecera.append(div2);
-    //      console.log(cabecera);
- 
-        
-    //     /**evento eliminar */  
-    //     let delbtn = document.getElementById(`eliminarCarrito${productos[i].id}`)
-
-    //     delbtn.onclick=()=> 
-    //     {
-    //         carrito.removeItem(productos[i]);
-    //         cabecera.removeChild(div2);
-    //         console.log(carrito);
-    //      }
               
      }
     
