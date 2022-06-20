@@ -1,132 +1,43 @@
-class Producto {
-	constructor(id,nombre,precio, cantidad, img) {
-		this.id = id; 
-		this.nombre = nombre;
-        this.precio =  precio;
-		this.cantidad = parseInt(cantidad);
-		this.img = img;
-	}
-}
-
-
-class Carrito {
-	constructor(usuario = "Martin",articulos = []) {
-		this.usuario = usuario
-		this.articulos = articulos
-	}
+const productos = [
+	{
+		
+		id: 0,
+        nombre: "Kero",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/kero2.png",
 	
-	addItem(articulo) {	
-   
-     
-        // console.log(this.articulos);
-        const encuentra = this.articulos.some((e)=> e.id === articulo.id);
-        if(encuentra){
-            
-            this.articulos.forEach((e)=>{ 
-                if(e.id == articulo.id){
-                 e.cantidad++;
+	},
+	{
+		id: 1,
+        nombre: "Coffe Cup",
+        precio: 40,
+        cantidad:0,
+		img: "../Assets/catalogo/CoffeCup600x600.jpg",
+	},
+	{   
+        id: 2,
+		nombre: "Leather Watch",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/HandWatch600x600.jpg",
 
-                let cant = document.getElementsByClassName("prd_cant") 
-             
-                 let index = this.articulos.findIndex((i)=> i.id == articulo.id)
-              
-                 cant[index].innerText =  e.cantidad;
-                }
-
-            })
-   
-        }
-        else{
-          
-            this.articulos.push(articulo);
-
-            this.articulos.forEach((num)=>{ 
-                if(num.cantidad == 0)
-                num.cantidad=1;})
+	},
 
 
-                      
-
-        let div2 = document.createElement("div")
-        div2.classList.add("prod_cajaDetalle");
-
-            div2.innerHTML +=`
-     
-            <div class="prod_imgCompra">
-                <img src=${articulo.img} class="" alt="Catalago3">
-                <div id="eliminarCarrito${articulo.id}"> x </div>
-            </div>
-            <div>
-                <span>${ articulo.nombre}</span></br>
-                <span class="prd_cant">${articulo.cantidad}</span> <span>x $${articulo.precio}</span>
-            </div>
-   
-          `    
-     
-         cabecera.append(div2);
-  
- 
-        
-        /**evento eliminar */  
-        let delbtn = document.getElementById(`eliminarCarrito${articulo.id}`)
-
-        delbtn.onclick=()=> 
-        {
-            carrito.removeItem(articulo);
-            cabecera.removeChild(div2);
-
-            
-            
-        console.log(delbtn.parentElement.parentElement.children[1].children[2].innerText);
-        // delbtn.parentElement.parentElement.children[1].children[2].innerText = 0;
-        // conta=0;
     
+];
 
 
-            console.log(carrito);
-         }
-              
-     }
-        
-    
+const carrito = new Carrito()
 
-	}
-	
-	removeItem(articulo) {
-
-		const index = this.articulos.findIndex((a) => a.id === articulo.id);
-		this.articulos.splice(index, 1);
-
-        
-	}
-	
-	vaciar() {
-		this.articulos = []
-	}
+if(localStorage.getItem("carrito")!=null){
+    carrito=JSON.parse(localStorage.getItem("carrito"));
 
 }
 
-let carrito = new Carrito()
-
-
-// if(localStorage.getItem("carrito")!=null){
-//     carrito.articulo=JSON.parse(localStorage.getItem("carrito"));
-   
-// }
-
-
-let productos = []
-productos.push(new Producto(0,"kero", 40,0,"../Assets/catalogo/kero2.png"))
-productos.push(new Producto(1,"Coffe Cup", 40,0,"../Assets/catalogo/CoffeCup600x600.jpg"))
-productos.push(new Producto(2,"Leather Watch",40,0,"../Assets/catalogo/HandWatch600x600.jpg"))
-
-
-console.log(productos)
-
+/***Aqui solo añade mis productos para venta     ***/
 let seccion = document.querySelector(".row_cat_prod") //me toma solo el primer elemento que coincidad
-let cabecera = document.querySelector(".primerArticuloJS") 
-
-// console.log(seccion)
 
 
 for (let producto of productos) {
@@ -164,21 +75,83 @@ for (let producto of productos) {
 
 }
 
- let cards = document.getElementsByClassName("prod_addCart");
+let contenedor = document.querySelector(".primerArticuloJS") 
+const listarCards = (productos) => {
 
-   // Boton de agregar
+    let BtnAddCart = document.getElementsByClassName("prod_addCart")
 
-for (let i = 0; i < cards.length; i++) {
+
+    for (let i = 0; i < BtnAddCart.length; i++) {
          
-    cards[i].onclick = () => {
+        BtnAddCart[i].onclick = () => {
+             createCard(productos[i]);
 
-        carrito.addItem(productos[i]);
-        console.log(carrito);         
-   
-
-              
-     }
+         }
+        
+        }
+        
     
+};
+
+
+const createCard = (producto) => {
+
+
+    if (!carrito.productInCart(producto.id)) {
+    
+        carrito.addProductToCart(producto)
+
+        let card = document.createElement("div")
+        card.classList.add("prod_cajaDetalle")
+   
+       
+        card.innerHTML =`
+     
+            <div class="prod_imgCompra">
+                <img src=${producto.img} class="" alt="Catalago3">
+                <div id="eliminarCarrito${producto.id}"> x </div>
+            </div>
+            <div>
+                <span>${ producto.nombre}</span></br>
+                <span class="prd_cant">${producto.cantidad}</span> <span>x $${producto.precio}</span>
+            </div>
+          `      
+            contenedor.append(card);
+
+            
+            quitarDelCard(producto, card);
+
+
+            }
+
+        else{
+
+            carrito.addCantToCart(producto);            
+         
+        }
+        console.log(carrito);
+       
+         localStorage.setItem("carrito",JSON.stringify(carrito));
+ } 
+
+
+
+
+
+ listarCards(productos);
+
+
+const quitarDelCard = (producto, cards) => {
+    let btnEliminar = document.getElementById(`eliminarCarrito${producto.id}`)
+    
+    btnEliminar.onclick=()=> 
+    {
+    console.log("mi cartID: "+producto.id)
+    carrito.deleteProductToCart(producto);
+    contenedor.removeChild(cards);   
+    console.log(carrito);
     }
 
+
+};
 
