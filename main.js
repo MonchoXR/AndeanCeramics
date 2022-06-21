@@ -1,4 +1,4 @@
-const productos = [
+let productos = [
 	{
 		
 		id: 0,
@@ -25,18 +25,15 @@ const productos = [
 	},
 
 
+
+
     
 ];
 
 
-const carrito = new Carrito()
+let carrito = new Carrito()
 
-if(localStorage.getItem("carrito")!=null){
-    carrito=JSON.parse(localStorage.getItem("carrito"));
 
-}
-
-/***Aqui solo añade mis productos para venta     ***/
 let seccion = document.querySelector(".row_cat_prod") //me toma solo el primer elemento que coincidad
 
 
@@ -76,6 +73,7 @@ for (let producto of productos) {
 }
 
 let contenedor = document.querySelector(".primerArticuloJS") 
+
 const listarCards = (productos) => {
 
     let BtnAddCart = document.getElementsByClassName("prod_addCart")
@@ -131,15 +129,10 @@ const createCard = (producto) => {
         }
         console.log(carrito);
        
-         localStorage.setItem("carrito",JSON.stringify(carrito));
+        
  } 
 
-
-
-
-
- listarCards(productos);
-
+ 
 
 const quitarDelCard = (producto, cards) => {
     let btnEliminar = document.getElementById(`eliminarCarrito${producto.id}`)
@@ -155,3 +148,31 @@ const quitarDelCard = (producto, cards) => {
 
 };
 
+if((localStorage.getItem("carrito")!=null) ){   
+    console.log("obtengo del storaga");
+    for(let cart of carrito.articulos){
+
+        let card = document.createElement("div")
+        card.classList.add("prod_cajaDetalle")
+
+        card.innerHTML =`
+     
+        <div class="prod_imgCompra">
+            <img src=${cart.img} class="" alt="Catalago3">
+            <div id="eliminarCarrito${cart.id}"> x </div>
+        </div>
+        <div>
+            <span>${ cart.nombre}</span></br>
+            <span class="prd_cant">${cart.cantidad}</span> <span>x $${cart.precio}</span>
+        </div>
+      `      
+        contenedor.append(card);
+        quitarDelCard(cart, card);
+        listarCards(productos);
+
+    }
+}
+
+listarCards(productos);
+
+console.log(carrito)
