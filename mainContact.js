@@ -49,16 +49,8 @@ validation
 function handleSubmit (e) {
 	e.preventDefault();
 
-    console.log(validation.isValid)
 
-    if(validation.isValid){
-        console.log("es valido");
-    }
-    else{
-        console.log("no es valido");
-    }
-
-    // if (!validation.isValid) return (console.log(validation.isValid));
+    if (!validation.isValid) return (console.log(validation.isValid));
     //sino es valido devuelve el return y queda ahi
     
 
