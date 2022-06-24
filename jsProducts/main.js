@@ -23,6 +23,14 @@ let productos = [
 		img: "../Assets/catalogo/HandWatch600x600.jpg",
 
 	},
+    // {   
+    //     id: 3,
+	// 	nombre: "Leather Watch",
+    //     precio: 650,
+    //     cantidad:0,
+	// 	img: "../Assets/catalogo/HandWatch600x600.jpg",
+
+	// },
 
 
 ];
@@ -34,7 +42,9 @@ let carrito = new Carrito()
 let seccion = document.querySelector(".row_cat_prod") //me toma solo el primer elemento que coincidad
 let contenedor = document.querySelector(".primerArticuloJS") 
 let contenedor2 = document.querySelector(".ContenedorMiniCart")
-let prodMiniCart = document.querySelector(".prodMiniCart")
+let prdContSubt = document.querySelector(".prod_contSubtJs")
+
+// let prodMiniCart = document.querySelector(".prodMiniCart")
           
 
 for (let producto of productos) {
@@ -90,7 +100,7 @@ const listarCards = (productos) => {
 const createCard = (producto) => {
 
 
-    if (!carrito.productInCart(producto.id)) {
+    if (!carrito.validaInCart(producto.id)) {
     
         carrito.addProductToCart(producto)
 
@@ -106,20 +116,38 @@ const createCard = (producto) => {
             </div>
             <div>
                 <span>${ producto.nombre}</span></br>
-                <span class="prd_cant">${producto.cantidad}</span> <span>x $${producto.precio}</span>
+                <span class="prd_cantJs prod_colorLetraCart">${producto.cantidad} x </span> <span> $${producto.precio}</span>
             </div>
           `      
             contenedor.append(card);
             quitarDelCard(producto, card);
 
 
-            let prodMiniCart = document.querySelector(".prodMiniCart")
-          
-            prodMiniCart.innerHTML =`
-            <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
-            <button class="prdViewCheckOut">CheckOut</button>
-            `
-            contenedor2.append(prodMiniCart);
+            // let prdContSubt = document.querySelector(".prod_contSubtJs")
+
+            prdContSubt.innerHTML =`
+
+            <p class="prod_colorLetraCart"><strong>SubTotal:</strong><span  class="prod_subTotal"> $${carrito.precioTotal}</span></p>
+            <div class="prodMiniCart">  
+               <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
+               <button class="prdViewCheckOut">CheckOut</button>
+           </div>
+           
+            `   
+            contenedor2.append(prdContSubt);
+
+        
+
+            // let prodMiniCart = document.querySelector(".prodMiniCart")
+
+            // prodMiniCart.innerHTML =`
+            // <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
+            // <button class="prdViewCheckOut">CheckOut</button>
+            // `
+            // contenedor2.append(prodMiniCart);
+
+            
+
 
             }
 
@@ -163,20 +191,23 @@ if((localStorage.getItem("carrito")!=null) ){
             <button id="eliminarCarrito${cart.id}" class="prodEliminaCss"> x </button>
         </div>
         <div>
-            <span>${ cart.nombre}</span></br>
-            <span class="prd_cant">${cart.cantidad}</span> <span>x $${cart.precio}</span>
+            <span class="prod_colorLetraCart">${ cart.nombre}</span></br>
+            <span class="prd_cantJs prod_colorLetraCart">${cart.cantidad} x </span> <span>$${cart.precio}</span>
         </div>
       `      
         contenedor.append(card);
         quitarDelCard(cart, card);
         listarCards(productos);
 
-    
-        prodMiniCart.innerHTML =`
-        <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
-        <button class="prdViewCheckOut">CheckOut</button>
+        prdContSubt.innerHTML =`
+
+        <p class="prod_colorLetraCart"><strong>SubTotal :</strong><span  class="prod_subTotal"> $${carrito.precioTotal}</span></p>
+        <div class="prodMiniCart">  
+           <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
+           <button class="prdViewCheckOut">CheckOut</button>
+       </div>
         `
-        contenedor2.append(prodMiniCart);
+        contenedor2.append(prdContSubt);
 
     }
 

@@ -213,11 +213,36 @@
 }
 
 .prod_segundaSeccion {
+
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
-  width: 60%;
-  margin-left: 3%;
-  padding: 2% 3%;
+  width: 35%;
+  margin-left: 2%;
+  padding: 2% 2%;
   background-color: white;
+
+  @media screen and (max-width: 1800px) {
+
+    width: 40%;
+
+  }
+
+  @media screen and (max-width: 1600px) {
+
+    width: 55%;
+
+  }
+
+  @media screen and (max-width: 1400px) {
+
+    width: 65%;
+
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    width: 95%;
+
+  }
 
   @media screen and (max-width: 992px) {
 
@@ -227,13 +252,16 @@
 
   }
 
-  div {
+  .primerArticuloJS {
 
+    padding: 0;
 
     .prod_cajaDetalle {
       display: flex;
       align-items: center;
       margin-bottom: 3%;
+      padding-bottom: 3%;
+      border-bottom: 1px solid rgba(0,0,0,.05);
 
       @media screen and (max-width: 992px) {
         width: 100%;
@@ -339,7 +367,7 @@
   .prdViewCart {
 
     // width: 50%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
     border: 1px solid;
     border-color: #ef3f49;
@@ -352,14 +380,19 @@
 
     @media screen and (max-width: 1400px) {
       font-size: 1.0em;
-      padding: 2% 3%;
+      // padding: 2% 3%;
 
     }
 
 
+    @media screen and (max-width: 992px) {
+      font-size: 1.2em;
+      // padding: 2% 2%;
+    }
+
     @media screen and (max-width: 1200px) {
-      font-size: 0.9em;
-      padding: 2% 2%;
+      // font-size: 0.9em;
+      // padding: 2% 2%;
     }
 
     &:hover {
@@ -367,7 +400,7 @@
       background-color: rgba(255, 0, 0, 0.952);
       color: white;
 
-      font-weight: 700;
+      font-weight: 550;
     }
   }
 
@@ -375,7 +408,7 @@
   // // justify-content: center;
   .prdViewCheckOut {
 
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
     border: 1px solid;
     border-color: #ef3f49;
@@ -386,27 +419,35 @@
     background: transparent;
 
 
-    padding: 2% 6%;
+    padding: 2% 8%;
 
 
     @media screen and (max-width: 1400px) {
       font-size: 1.0em;
-      padding: 2% 2%;
+      // padding: 2% 2%;
     }
 
 
     @media screen and (max-width: 1200px) {
-      font-size: 0.9em;
-      padding: 2% 2%;
+      // font-size: 0.9em;
+      // padding: 2% 2%;
     }
 
+    @media screen and (max-width: 992px) {
+      font-size: 1.2em;
+      // padding: 2% 2%;
+    }
     &:hover {
 
       background-color: rgba(255, 0, 0, 0.952);
       color: white;
 
-      font-weight: 700;
+      font-weight: 550;
     }
   }
 
+}
+
+.prod_colorLetraCart{
+  color: #888888 ;
 }

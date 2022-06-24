@@ -578,34 +578,50 @@ model-viewer {
 
 .prod_segundaSeccion {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
-  width: 60%;
-  margin-left: 3%;
-  padding: 2% 3%;
+  width: 35%;
+  margin-left: 2%;
+  padding: 2% 2%;
   background-color: white; }
+  @media screen and (max-width: 1800px) {
+    .prod_segundaSeccion {
+      width: 40%; } }
+  @media screen and (max-width: 1600px) {
+    .prod_segundaSeccion {
+      width: 55%; } }
+  @media screen and (max-width: 1400px) {
+    .prod_segundaSeccion {
+      width: 65%; } }
+  @media screen and (max-width: 1200px) {
+    .prod_segundaSeccion {
+      width: 95%; } }
   @media screen and (max-width: 992px) {
     .prod_segundaSeccion {
       margin-left: inherit;
       margin-top: 3%;
       width: 100%; } }
-  .prod_segundaSeccion div .prod_cajaDetalle {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3%; }
-    @media screen and (max-width: 992px) {
-      .prod_segundaSeccion div .prod_cajaDetalle {
-        width: 100%;
-        justify-content: start; } }
-    .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra {
-      padding-right: 5%;
-      width: 100px;
-      position: relative; }
+  .prod_segundaSeccion .primerArticuloJS {
+    padding: 0; }
+    .prod_segundaSeccion .primerArticuloJS .prod_cajaDetalle {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3%;
+      padding-bottom: 3%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
       @media screen and (max-width: 992px) {
-        .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra {
-          display: flex;
-          justify-content: flex-end;
-          width: 30%; } }
-      .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra img {
-        width: 100%; }
+        .prod_segundaSeccion .primerArticuloJS .prod_cajaDetalle {
+          width: 100%;
+          justify-content: start; } }
+      .prod_segundaSeccion .primerArticuloJS .prod_cajaDetalle .prod_imgCompra {
+        padding-right: 5%;
+        width: 100px;
+        position: relative; }
+        @media screen and (max-width: 992px) {
+          .prod_segundaSeccion .primerArticuloJS .prod_cajaDetalle .prod_imgCompra {
+            display: flex;
+            justify-content: flex-end;
+            width: 30%; } }
+        .prod_segundaSeccion .primerArticuloJS .prod_cajaDetalle .prod_imgCompra img {
+          width: 100%; }
 
 .prodEliminaCss {
   position: absolute;
@@ -653,7 +669,7 @@ model-viewer {
   display: flex;
   width: 100%; }
   .prodMiniCart .prdViewCart {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
     border: 1px solid;
     border-color: #ef3f49;
@@ -665,18 +681,16 @@ model-viewer {
     background: transparent; }
     @media screen and (max-width: 1400px) {
       .prodMiniCart .prdViewCart {
-        font-size: 1.0em;
-        padding: 2% 3%; } }
-    @media screen and (max-width: 1200px) {
+        font-size: 1.0em; } }
+    @media screen and (max-width: 992px) {
       .prodMiniCart .prdViewCart {
-        font-size: 0.9em;
-        padding: 2% 2%; } }
+        font-size: 1.2em; } }
     .prodMiniCart .prdViewCart:hover {
       background-color: rgba(255, 0, 0, 0.952);
       color: white;
-      font-weight: 700; }
+      font-weight: 550; }
   .prodMiniCart .prdViewCheckOut {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 500;
     border: 1px solid;
     border-color: #ef3f49;
@@ -684,19 +698,20 @@ model-viewer {
     color: #ef3f49;
     text-align: center;
     background: transparent;
-    padding: 2% 6%; }
+    padding: 2% 8%; }
     @media screen and (max-width: 1400px) {
       .prodMiniCart .prdViewCheckOut {
-        font-size: 1.0em;
-        padding: 2% 2%; } }
-    @media screen and (max-width: 1200px) {
+        font-size: 1.0em; } }
+    @media screen and (max-width: 992px) {
       .prodMiniCart .prdViewCheckOut {
-        font-size: 0.9em;
-        padding: 2% 2%; } }
+        font-size: 1.2em; } }
     .prodMiniCart .prdViewCheckOut:hover {
       background-color: rgba(255, 0, 0, 0.952);
       color: white;
-      font-weight: 700; }
+      font-weight: 550; }
+
+.prod_colorLetraCart {
+  color: #888888; }
 
 .banner__blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");

@@ -1,11 +1,12 @@
 class Carrito {
 	constructor(usuario = "Martin", articulos = []) {
 		this.usuario = usuario;
-		this.articulos = this._recuperarCarrito() || articulos;
+		this.articulos = this._recuperarCarritoArticulos() || articulos;
+        this.precioTotal = this._recuperarCarritoPrecioTotal() || 0;
 	}
 	
 
-    productInCart(idProducto) {
+    validaInCart(idProducto) {
         console.log(this.articulos.some((a) => a.id === idProducto));
         return this.articulos.some((a) => a.id === idProducto);
 	}
@@ -17,7 +18,7 @@ class Carrito {
 
 
     Swal.fire({
-        position: 'top-center',
+        position: 'top',
         icon: 'success',
         title:  articulo.nombre,
         text:'Agregado',
@@ -30,7 +31,10 @@ class Carrito {
         if(a.cantidad == 0)
         a.cantidad=1;})
 
-        localStorage.setItem("carrito",JSON.stringify(this.articulos));
+        console.log(articulo.precio)
+     
+        this.precioTotal = this.precioTotal +articulo.precio;
+        this._saveCarritoStorage();
 
 	}
 	
@@ -41,8 +45,20 @@ class Carrito {
 
         this.articulos[index].cantidad =0;
 		this.articulos.splice(index, 1);
-        // localStorage.setItem("carrito",JSON.stringify(this.articulos));
+
+       
+       
+        this.precioTotal = this._calcularTotal(this.articulos)
         this._saveCarritoStorage();
+
+        let subTotal = document.getElementsByClassName("prod_subTotal") 
+ 
+        subTotal[0].innerText = `$${this.precioTotal}`;
+
+
+        // localStorage.setItem("carrito",JSON.stringify(this.articulos));
+
+       
 	}
 
     addCantToCart(articulo){
@@ -51,14 +67,25 @@ class Carrito {
             if(e.id == articulo.id){
              e.cantidad++;
 
-            let cant = document.getElementsByClassName("prd_cant") 
+            let cant = document.getElementsByClassName("prd_cantJs") 
          
              let index = this.articulos.findIndex((a)=> a.id == articulo.id)
           
-             cant[index].innerText =  e.cantidad;
+             cant[index].innerText =  `${e.cantidad} x `;
+            //  this.precioTotal = e.precio * e.cantidad;
+            
             }
 
         })
+
+        /*para Carrito*/
+        console.log("voy sumando: " +this._calcularTotal(this.articulos) );
+        this.precioTotal = this._calcularTotal(this.articulos) 
+       
+        /*para DOM*/
+        let subTotal = document.getElementsByClassName("prod_subTotal") 
+        subTotal[0].innerText = ` $${this.precioTotal}`;
+        
         this._saveCarritoStorage();
 
     }
@@ -67,17 +94,37 @@ class Carrito {
 		this.articulos = []
 	}
 
-    _recuperarCarrito() {
+    _recuperarCarritoArticulos() {
 		if(localStorage.getItem("carrito")!=null){
-            this.articulos=JSON.parse(localStorage.getItem("carrito"));
+            this.articulos=(JSON.parse(localStorage.getItem("carrito")).articulos);
         
         }
 		return this.articulos;
 	}
 
+    _recuperarCarritoPrecioTotal() {
+		if(localStorage.getItem("carrito")!=null){
+            this.precioTotal=(JSON.parse(localStorage.getItem("carrito")).precioTotal);
+        
+        }
+		return this.precioTotal;
+	}
+
     _saveCarritoStorage() {
-        localStorage.setItem("carrito",JSON.stringify(this.articulos));
+        localStorage.setItem("carrito",JSON.stringify(carrito));
     }
+
+    
+    _calcularTotal(productos) {
+		let total = 0;
+
+		productos.forEach((articulo) => {
+            console.log("precio del calcular es: "+ articulo.precio);
+			total = total + articulo.cantidad* articulo.precio;
+		});
+
+		return total;
+	}
 
 
 
