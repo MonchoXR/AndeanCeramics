@@ -481,7 +481,8 @@ model-viewer {
     justify-content: center;
     flex-wrap: wrap;
     outline: 1px solid #eeeeee;
-    background-color: white; }
+    background-color: white;
+    align-content: baseline; }
     .container_prod .row_cat_prod .col_cat_prod {
       margin: 2% 2%;
       width: 26%; }
@@ -577,7 +578,7 @@ model-viewer {
 
 .prod_segundaSeccion {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.08);
-  width: 35%;
+  width: 100%;
   margin-left: 3%;
   padding: 2% 3%;
   background-color: white; }
@@ -606,11 +607,11 @@ model-viewer {
       .prod_segundaSeccion div .prod_cajaDetalle .prod_imgCompra img {
         width: 100%; }
 
-#eliminarCarrito0 {
+.prodEliminaCss {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   color: red;
   padding-top: 0;
   padding-bottom: 1px;
@@ -618,16 +619,17 @@ model-viewer {
   padding-right: 7px;
   font-size: 14px;
   text-align: center;
-  border-radius: 10px;
-  font-weight: 500; }
-  #eliminarCarrito0:hover {
+  border-radius: 30px;
+  font-weight: 500;
+  border-color: white;
+  border: 0px solid; }
+  .prodEliminaCss:hover {
     background-color: rgba(255, 0, 0, 0.952);
     color: white;
     border-radius: 10px;
     font-weight: 750; }
 
-#eliminarCarrito1 {
-  position: absolute;
+.prodEliminaCartCss {
   top: 0px;
   left: 0px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -636,35 +638,65 @@ model-viewer {
   padding-bottom: 1px;
   padding-left: 7px;
   padding-right: 7px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   border-radius: 10px;
-  font-weight: 500; }
-  #eliminarCarrito1:hover {
+  font-weight: 700;
+  border: 0px solid; }
+  .prodEliminaCartCss:hover {
     background-color: rgba(255, 0, 0, 0.952);
     color: white;
     border-radius: 10px;
     font-weight: 750; }
 
-#eliminarCarrito2 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: red;
-  padding-top: 0;
-  padding-bottom: 1px;
-  padding-left: 7px;
-  padding-right: 7px;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 10px;
-  font-weight: 500; }
-  #eliminarCarrito2:hover {
-    background-color: rgba(255, 0, 0, 0.952);
-    color: white;
-    border-radius: 10px;
-    font-weight: 750; }
+.prodMiniCart {
+  display: flex;
+  width: 100%; }
+  .prodMiniCart .prdViewCart {
+    font-size: 1.1em;
+    font-weight: 500;
+    border: 1px solid;
+    border-color: #ef3f49;
+    border-radius: 1px;
+    color: #ef3f49;
+    text-align: center;
+    padding: 2% 6%;
+    margin-right: 3%;
+    background: transparent; }
+    @media screen and (max-width: 1400px) {
+      .prodMiniCart .prdViewCart {
+        font-size: 1.0em;
+        padding: 2% 3%; } }
+    @media screen and (max-width: 1200px) {
+      .prodMiniCart .prdViewCart {
+        font-size: 0.9em;
+        padding: 2% 2%; } }
+    .prodMiniCart .prdViewCart:hover {
+      background-color: rgba(255, 0, 0, 0.952);
+      color: white;
+      font-weight: 700; }
+  .prodMiniCart .prdViewCheckOut {
+    font-size: 1.1em;
+    font-weight: 500;
+    border: 1px solid;
+    border-color: #ef3f49;
+    border-radius: 1px;
+    color: #ef3f49;
+    text-align: center;
+    background: transparent;
+    padding: 2% 6%; }
+    @media screen and (max-width: 1400px) {
+      .prodMiniCart .prdViewCheckOut {
+        font-size: 1.0em;
+        padding: 2% 2%; } }
+    @media screen and (max-width: 1200px) {
+      .prodMiniCart .prdViewCheckOut {
+        font-size: 0.9em;
+        padding: 2% 2%; } }
+    .prodMiniCart .prdViewCheckOut:hover {
+      background-color: rgba(255, 0, 0, 0.952);
+      color: white;
+      font-weight: 700; }
 
 .banner__blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");

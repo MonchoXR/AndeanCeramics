@@ -24,7 +24,32 @@ let productos = [
 
 	},
 
+    {   
+        id: 3,
+		nombre: "Leather Watch",
+        precio: 350,
+        cantidad:0,
+		img: "../Assets/catalogo/HandWatch600x600.jpg",
 
+	},
+
+    {   
+        id: 5,
+		nombre: "Leather Watch",
+        precio: 350,
+        cantidad:0,
+		img: "../Assets/catalogo/HandWatch600x600.jpg",
+
+	},
+
+    {   
+        id: 6,
+		nombre: "Leather Watch",
+        precio: 350,
+        cantidad:0,
+		img: "../Assets/catalogo/HandWatch600x600.jpg",
+
+	},
 
 
     
@@ -35,7 +60,10 @@ let carrito = new Carrito()
 
 
 let seccion = document.querySelector(".row_cat_prod") //me toma solo el primer elemento que coincidad
-
+let contenedor = document.querySelector(".primerArticuloJS") 
+let contenedor2 = document.querySelector(".ContenedorMiniCart")
+let prodMiniCart = document.querySelector(".prodMiniCart")
+          
 
 for (let producto of productos) {
 	let div = document.createElement("div")
@@ -72,22 +100,17 @@ for (let producto of productos) {
 
 }
 
-let contenedor = document.querySelector(".primerArticuloJS") 
 
 const listarCards = (productos) => {
 
     let BtnAddCart = document.getElementsByClassName("prod_addCart")
 
-
     for (let i = 0; i < BtnAddCart.length; i++) {
-         
-        BtnAddCart[i].onclick = () => {
-             createCard(productos[i]);
 
-         }
-        
+        BtnAddCart[i].onclick = () => {
+            createCard(productos[i]);
         }
-        
+    }
     
 };
 
@@ -107,7 +130,7 @@ const createCard = (producto) => {
      
             <div class="prod_imgCompra">
                 <img src=${producto.img} class="" alt="Catalago3">
-                <div id="eliminarCarrito${producto.id}"> x </div>
+                <button id="eliminarCarrito${producto.id}" class="prodEliminaCss"> x </button>
             </div>
             <div>
                 <span>${ producto.nombre}</span></br>
@@ -115,10 +138,16 @@ const createCard = (producto) => {
             </div>
           `      
             contenedor.append(card);
-
-            
             quitarDelCard(producto, card);
 
+
+            let prodMiniCart = document.querySelector(".prodMiniCart")
+          
+            prodMiniCart.innerHTML =`
+            <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
+            <button class="prdViewCheckOut">CheckOut</button>
+            `
+            contenedor2.append(prodMiniCart);
 
             }
 
@@ -128,13 +157,13 @@ const createCard = (producto) => {
          
         }
         console.log(carrito);
-       
-        
+ 
  } 
 
  
 
 const quitarDelCard = (producto, cards) => {
+
     let btnEliminar = document.getElementById(`eliminarCarrito${producto.id}`)
     
     btnEliminar.onclick=()=> 
@@ -159,7 +188,7 @@ if((localStorage.getItem("carrito")!=null) ){
      
         <div class="prod_imgCompra">
             <img src=${cart.img} class="" alt="Catalago3">
-            <div id="eliminarCarrito${cart.id}"> x </div>
+            <button id="eliminarCarrito${cart.id}" class="prodEliminaCss"> x </button>
         </div>
         <div>
             <span>${ cart.nombre}</span></br>
@@ -170,7 +199,16 @@ if((localStorage.getItem("carrito")!=null) ){
         quitarDelCard(cart, card);
         listarCards(productos);
 
+    
+        prodMiniCart.innerHTML =`
+        <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
+        <button class="prdViewCheckOut">CheckOut</button>
+        `
+        contenedor2.append(prodMiniCart);
+
     }
+
+          
 }
 
 listarCards(productos);

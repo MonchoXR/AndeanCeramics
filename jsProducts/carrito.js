@@ -9,13 +9,23 @@ class Carrito {
         console.log(this.articulos.some((a) => a.id === idProducto));
         return this.articulos.some((a) => a.id === idProducto);
 	}
+    
 
 	addProductToCart(articulo) {	
-    
-                
 
     this.articulos.push(articulo);
-    // this.articulos=[articulo, ...this.articulos]
+
+
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title:  articulo.nombre,
+        text:'Agregado',
+        showConfirmButton: false,
+        timer: 1000
+      })
+    
+
     this.articulos.forEach((a)=>{ 
         if(a.cantidad == 0)
         a.cantidad=1;})
