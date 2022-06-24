@@ -24,35 +24,7 @@ let productos = [
 
 	},
 
-    {   
-        id: 3,
-		nombre: "Leather Watch",
-        precio: 350,
-        cantidad:0,
-		img: "../Assets/catalogo/HandWatch600x600.jpg",
 
-	},
-
-    {   
-        id: 5,
-		nombre: "Leather Watch",
-        precio: 350,
-        cantidad:0,
-		img: "../Assets/catalogo/HandWatch600x600.jpg",
-
-	},
-
-    {   
-        id: 6,
-		nombre: "Leather Watch",
-        precio: 350,
-        cantidad:0,
-		img: "../Assets/catalogo/HandWatch600x600.jpg",
-
-	},
-
-
-    
 ];
 
 
