@@ -51,10 +51,6 @@ class Carrito {
         this.precioTotal = this._calcularTotal(this.articulos)
         this._saveCarritoStorage();
 
-        let subTotal = document.getElementsByClassName("prod_subTotal") 
- 
-        subTotal[0].innerText = `$${this.precioTotal}`;
-
 
         // localStorage.setItem("carrito",JSON.stringify(this.articulos));
 

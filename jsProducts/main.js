@@ -170,9 +170,24 @@ const quitarDelCard = (producto, cards) => {
     {
     console.log("mi cartID: "+producto.id)
     carrito.deleteProductToCart(producto);
-    contenedor.removeChild(cards);   
-    console.log(carrito);
+    contenedor.removeChild(cards); 
+      
+    let subTotal = document.getElementsByClassName("prod_subTotal") 
+ 
+    subTotal[0].innerText = `$${carrito.precioTotal}`;
+
+
+
+    if(carrito.precioTotal<1){
+        prdContSubt.innerHTML="";
     }
+
+      
+
+
+    }
+
+  
 
 
 };
