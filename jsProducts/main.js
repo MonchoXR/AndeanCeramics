@@ -125,35 +125,32 @@ const createCard = (producto) => {
 
             // let prdContSubt = document.querySelector(".prod_contSubtJs")
 
+
+
+
+            //DOM VIEW VIEW BUTTON
             prdContSubt.innerHTML =`
 
-            <p class="prod_colorLetraCart"><strong>SubTotal:</strong><span  class="prod_subTotal"> $${carrito.precioTotal}</span></p>
+            <p class="prod_colorLetraCart"><strong>SubTotal:</strong><span  class="prod_subTotal"> $${carrito.preciosubTotal}</span></p>
             <div class="prodMiniCart">  
                <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
-               <button class="prdViewCheckOut">CheckOut</button>
+               <button class="prdViewCheckOut" onclick="document.location='checkout.html'">CheckOut</button>
            </div>
            
             `   
             contenedor2.append(prdContSubt);
-
-        
-
-            // let prodMiniCart = document.querySelector(".prodMiniCart")
-
-            // prodMiniCart.innerHTML =`
-            // <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
-            // <button class="prdViewCheckOut">CheckOut</button>
-            // `
-            // contenedor2.append(prodMiniCart);
-
-            
 
 
             }
 
         else{
 
-            carrito.addCantToCart(producto);            
+            carrito.addCantToCart(producto);   
+
+            //DOM SUB TOTAL
+            let subTotal = document.getElementsByClassName("prod_subTotal") 
+            subTotal[0].innerText = ` $${carrito.preciosubTotal}`;
+         
          
         }
         console.log(carrito);
@@ -174,11 +171,11 @@ const quitarDelCard = (producto, cards) => {
       
     let subTotal = document.getElementsByClassName("prod_subTotal") 
  
-    subTotal[0].innerText = `$${carrito.precioTotal}`;
+    subTotal[0].innerText = `$${carrito.preciosubTotal}`;
 
 
 
-    if(carrito.precioTotal<1){
+    if(carrito.preciosubTotal<1){
         prdContSubt.innerHTML="";
     }
 
@@ -216,10 +213,10 @@ if((localStorage.getItem("carrito")!=null) ){
 
         prdContSubt.innerHTML =`
 
-        <p class="prod_colorLetraCart"><strong>SubTotal :</strong><span  class="prod_subTotal"> $${carrito.precioTotal}</span></p>
+        <p class="prod_colorLetraCart"><strong>SubTotal :</strong><span  class="prod_subTotal"> $${carrito.preciosubTotal}</span></p>
         <div class="prodMiniCart">  
            <button class="prdViewCart" onclick="document.location='cart.html'"> View Cart </button>
-           <button class="prdViewCheckOut">CheckOut</button>
+           <button class="prdViewCheckOut"  onclick="document.location='checkout.html'" >CheckOut</button>
        </div>
         `
         contenedor2.append(prdContSubt);

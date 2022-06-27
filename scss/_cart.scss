@@ -21,25 +21,157 @@
   
 
   
-  .cart_segundaSeccion{
+.cart_contenedor{
 
     max-width: 1920px;
     width: 80%;
     margin: 0 auto;
-    // background-color: red;
     padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+   
+
+    .cart_primeraSeccion{
+        width: 100%; //Cuando es space-between podemos poner 100 para que ocupe el espacio q deja
     
-  } 
+    
+        .cart_btnContinueShop{
+
+            width: 25%;
+            font-size: 1.2em;
+            font-weight: 500;
+            border: 1px solid;
+            border-color: #ef3f49;
+            border-radius: 1px;
+            color: #ef3f49;
+            text-align: center;
+        
+            background: transparent;
+            padding: 1% 1%;
+
+            @media screen and (max-width: 1400px) {
+                font-size: 1.0em;
+          
+              }
+
+              @media screen and (max-width: 1200px) {
+                font-size: 0.8em;
+          
+            }
 
 
-.cuadrar{
+            &:hover {
+
+                background-color: rgba(255, 0, 0, 0.952);
+                color: white;
+          
+                font-weight: 550;
+              }
+            
+          
+        }
+
+        .cart_btnUpdate{
+
+            width: 20%;
+            font-size: 1.2em;
+            font-weight: 500;
+            border: 1px solid;
+            border-color: #ef3f49;
+            border-radius: 1px;
+            color: #ef3f49;
+            text-align: center;
+        
+            background: transparent;
+            padding: 1% 1%;
+            margin-left: 1%;
+
+            @media screen and (max-width: 1400px) {
+                font-size: 1.0em;
+          
+            }
+
+              @media screen and (max-width: 1200px) {
+                font-size: 0.8em;
+          
+            }
+
+
+            &:hover {
+
+                background-color: rgba(255, 0, 0, 0.952);
+                color: white;
+          
+                font-weight: 550;
+              }
+
+        }
+    
+    }
+
+
+    .cart_segundaSeccion {
+        width: 40%;
+        margin-left: 2%;
+
+        .cart_sinBottomBorder{
+            border-bottom: 0;
+
+        }
+
+        .cart_summary {
+            // width: 100%;
+            margin-left: 3%;
+            padding: 2%;
+            outline: 2px solid rgba(0,0,0,.1);
+          
+
+            .cart_colorLetraTotal {
+                font-size: 22px;
+                font-weight: 700;
+                color: #000;
+            }
+
+            .cart_ViewCheckOut{
+            width: 100%;
+            font-size: 1.2em;
+            font-weight: 500;
+            border: 1px solid;
+            border-color: #ef3f49;
+            border-radius: 1px;
+            color: #ef3f49;
+            text-align: center;
+        
+            background: transparent;
+            padding: 2% 8%;
+            margin-bottom: 7%;
+
+            &:hover {
+
+                background-color: rgba(255, 0, 0, 0.952);
+                color: white;
+          
+                font-weight: 550;
+              }
+            }
+
+
+        }
+    }
+} 
+
+
+.prd_cuadro{
+
+    vertical-align: middle;
+
+    
+}
+
+.prd_cuadroBtnX{
     display: flex;
     align-items: center;
-
-    // align-content: center;
-    // justify-content: center;
-     height: 10vh;
-         // text-align: justify;
+    height: 10vh;
     
 }
 
@@ -50,23 +182,45 @@
     // ma  
 }
 
-.eliminarCart {
 
-      background-color: rgba(255, 255, 255, 0.800);
-      color: red;
-    
-      width: 20px;
-      font-size: 10x;
-      text-align: center;
+.cartEliminaCss {
+    // position:absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.800);
+    color: red;
+    padding-top: 0;
+    padding-bottom: 1px;
+    padding-left: 7px;
+    padding-right: 7px;
+    //  margin: 0px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 0px solid;
+  
+    &:hover {
+  
+      background-color: rgba(255, 0, 0, 0.952);
+      color: white;
       border-radius: 10px;
-      // font-weight: 500;
-
-      &:hover {
-
-          background-color: rgba(255, 0, 0, 0.952);
-          color: white;
-          border-radius: 10px;
-          //  line-height: 1.2;
-          font-weight: 750;
-      }
+      //  line-height: 1.2;
+      font-weight: 750;
+    }
+  
   }
+  
+
+  // // justify-content: center;
+.cart_cuponContainer{
+    display: flex;
+    justify-content: space-between;
+
+
+    .cart_btnApply{
+        width:60%;
+        margin-left: 3%;
+    }
+   
+}

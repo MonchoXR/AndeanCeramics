@@ -1,0 +1,65 @@
+.check_banner {
+
+
+    h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        margin: 2% 0;
+    }
+}
+
+.check_content{
+    // display: flex;
+    // justify-content: space-between;
+    // margin: auto 0;
+    margin: 0 auto;
+   
+
+    .check_segundaSeccion{
+
+        border-left: #888888 1pt solid;
+
+        .check_sizeTotal{
+            font-size: 1.5em;
+        }
+
+
+        .cart_payinputMargin{
+
+            margin-bottom: 5%;
+        
+        }
+        .cart_paylabelMargin{
+        
+            margin-top: -30px;
+        
+            .check_paypal{
+        
+                width: 200px;
+                height: auto;
+            
+            }
+        
+        }
+        
+        .check_order{
+        
+            width: 100%;
+            font-size: 1.2em;
+            font-weight: 500;
+            border: 1px solid;
+            border-color: #ef3f49;
+            border-radius: 1px;
+            color: #ef3f49;
+            text-align: center;
+        
+            background: transparent;
+            padding: 2% 8%;
+            margin-bottom: 7%;
+        }
+
+
+    }
+}
+
