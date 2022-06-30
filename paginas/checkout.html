@@ -62,7 +62,7 @@
 
 
 
-    <div class="container row check_content">
+    <div id="check_contAll" class="container row check_content">
 
        
         <form class="row col-8 ">
@@ -82,8 +82,13 @@
             </div>
 
             <div class="col-12">
-                <label for="inputCompany" class="form-label">Country/Region</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                <label for="inputCountryJS" class="form-label">Country/Region</label>
+                <!-- <input type="text" class="form-control" id="inputAddress" placeholder=""> -->
+                <select id="inputCountryJS" class="form-select">
+                  <option selected>Pais..</option>
+                  <!-- <option>...</option>
+                  <option>hi</option> -->
+                </select>
             </div>
 
             <div class="col-md-6">
@@ -95,6 +100,7 @@
               <select id="inputState" class="form-select">
                 <option selected>Choose...</option>
                 <option>...</option>
+                <option>hi</option>
               </select>
             </div>
             <div class="col-md-2">
