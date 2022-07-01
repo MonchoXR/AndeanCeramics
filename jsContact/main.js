@@ -38,20 +38,17 @@ validation
 	.onSuccess((event) => {
 
 		bIsValido=true;
-		console.log("es valido");
-
 		const data = new FormData(form);
 
 		datosForm = Object.fromEntries(data.entries());
 	   console.log(datosForm);
-	   console.log("mensaje enviado");
+
 		form.reset();
 	  })
 	
 	.onFail(()=>{
-
 		bIsValido=false;
-		console.log("false");
+	
 	})
 	
 	;

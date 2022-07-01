@@ -65,63 +65,80 @@
     <div id="check_contAll" class="container row check_content">
 
        
-        <form class="row col-8 ">
-            <h4>Billing</h4>
+      <form id="formCheckout" class=" row col-8 needs-validation" novalidate="">
+            <!-- <h4>Billing</h4> -->
             <div class="col-md-6">
-                <label for="inputName1" class="form-label">FirstName</label>
-                <input type="text" class="form-control" placeholder="" aria-label="First name">
+                <label for="inputNamechk" class="form-label">FirstName</label>
+                <input type="text" class="form-control" id="inputNamechk" placeholder="" aria-label="First name" name="inputNamechk" required >
+                <div class="invalid-feedback">Please provide your name</div>
+                <div class="valid-feedback">looks good!</div>
               </div>
               <div class="col-md-6">
-                <label for="inputLastName1" class="form-label">LastName</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Last name">
-            </div>
+                <label for="inputLastNamechk" class="form-label">LastName</label>
+                <input type="text" id="inputLastNamechk"  class="form-control" placeholder="" aria-label="Last name" name="inputLastNamechk" required>
+                <div class="invalid-feedback">Please provide your Lastname</div>
+                <div class="valid-feedback">looks good!</div>
+              </div>
 
             <div class="col-12">
-                <label for="inputAddress" class="form-label">Street Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                <label for="inputAddresschk" class="form-label">Street Address</label>
+                <input type="text" class="form-control" id="inputAddresschk" placeholder="" name="inputAddresschk" required>
+                <div class="invalid-feedback">Please provide your Street Address</div>
+                <div class="valid-feedback">looks good!</div>
             </div>
 
             <div class="col-12">
                 <label for="inputCountryJS" class="form-label">Country/Region</label>
                 <!-- <input type="text" class="form-control" id="inputAddress" placeholder=""> -->
-                <select id="inputCountryJS" class="form-select">
-                  <option selected>Pais..</option>
+                <select id="inputCountryJS" class="form-select" name="inputCountryJS" required="">
+                  <option selected="" disabled="" value="">choose..</option>
                   <!-- <option>...</option>
                   <option>hi</option> -->
                 </select>
+                <div class="invalid-feedback">Please provide country</div>
+                <div class="valid-feedback">looks good!</div>
             </div>
 
             <div class="col-md-6">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCity">
+              <label for="inputCityChk" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCityChk" name="inputCityChk" required>
+              <div class="invalid-feedback">Please provide country</div>
+              <div class="valid-feedback">looks good!</div>
             </div>
             <div class="col-md-4">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-                <option>hi</option>
+              <label for="inputStateChk" class="form-label">State</label>
+              <select id="inputStateChk" class="form-select" name="inputStateChk" required="">
+                <option selected="" disabled="" value="">Choose...</option>
+                <option>Mi State</option>
               </select>
+              <div class="invalid-feedback">Please provide State</div>
+              <div class="valid-feedback">looks good!</div>
             </div>
             <div class="col-md-2">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
+              <label for="inputZipChk" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZipChk" name="inputZipChk" required>
+              <div class="invalid-feedback">Please provide Zip</div>
+              <div class="valid-feedback">looks good!</div>
             </div>
 
             <div class="col-md-12">
-              <label for="inputPhone" class="form-label">Phone</label>
-              <input type="tel" class="form-control" id="inputPhone">
+              <label for="inputPhoneChk" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="inputPhoneChk" name="inputPhoneChk" required>
+              <div class="invalid-feedback">Please provide Phone</div>
+              <div class="valid-feedback">looks good!</div>
             </div>
 
             
             <div class="col-md-12">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <label for="inputEmailChk" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmailChk" name="inputEmailChk" required>
+              <div class="invalid-feedback">Please provide Email</div>
+              <div class="valid-feedback">looks good!</div>
             </div>
         </form>
     
 
-      <div class=" check_segundaSeccion col-4 ">
+        <div class=" check_segundaSeccion col-4 ">
             <h4>Your Order</h4>
             <table class="table">
                 <thead>
@@ -169,9 +186,13 @@
                 </label>
               </div>
 
-              <button class="check_order" onclick="document.location='#'">Place Order</button>
-      </div>
+              <button type="submit" form="formCheckout" class="check_order" onclick="document.location='#'">Place Order</button>
+        </div>
+
     </div>
+
+  
+    
       
    <!-- JavaScript Bundle with Popper -->
 <script 

@@ -22,7 +22,7 @@ if (carrito.preciosubTotal < 1) {
 
 
 function listarCarts() {
-    console.log("obtengo del storagaparaCheckou");
+ 
     for (let cart of carrito.articulos) {
         let card = document.createElement("tr");
         card.innerHTML = `
@@ -43,7 +43,9 @@ function listarCarts() {
 
 
 }
-console.log(carrito);
+
+
+
 
 function ObtenerPaises(){
 
@@ -59,10 +61,10 @@ function ObtenerPaises(){
            }
 
            listaPais.push(dataPais);
-        console.log(pais)
+    
            
            let cardCountry = document.createElement("option");
-        //    cadtCountry.classList.add("selected")
+      
            cardCountry.innerHTML = `
        
            <option>${pais.name.common}</option>
@@ -80,7 +82,37 @@ function ObtenerPaises(){
 }   
 
 ObtenerPaises();
-console.log(listaPais)
 
 
-//NO PUEDO HACER listaPais[0]
+
+const formChk = document.getElementById("formCheckout");
+formChk.addEventListener("submit", (e) => handleSubmit(e));
+
+
+function handleSubmit (e) {
+	e.preventDefault();
+
+
+    formChk.setAttribute("class", "row col-8 needs-validation" );
+
+    if(formChk.checkValidity()){
+     
+    const datachk = new FormData(formChk);
+
+    let datosFormchk = Object.fromEntries(datachk.entries());
+    console.log(datosFormchk )
+  
+   
+    formChk.reset();
+  
+    }
+    else{
+        formChk.classList.add('was-validated')
+
+    }
+
+    
+};
+
+
+
