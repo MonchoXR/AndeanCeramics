@@ -60,8 +60,8 @@
             
               <div class="slider">
                 <div class="slides">
-                  <button class="slide selected" onclick="switchSrc(this, 'kero')" style="background-image: url('../Assets/kero.png');"></button>
-                  <button class="slide" onclick="switchSrc(this, 'fruta')" style="background-image: url('../Assets/fruta.png');"></button>
+                  <button class="slide selected" onclick="switchSrc(this, 'Kero')" style="background-image: url('../Assets/kero.png');"></button>
+                  <button class="slide" onclick="switchSrc(this, 'Fruta')" style="background-image: url('../Assets/fruta.png');"></button>
                   <!-- <button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.png');">
                   
                   </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.png');">    
@@ -74,7 +74,7 @@
               const modelViewer = document.querySelector("model-viewer");
             
               window.switchSrc = (element, name) => {
-
+                console.log(element);
                 console.log(name);
                 
                 const base = "../Assets/" + name;
