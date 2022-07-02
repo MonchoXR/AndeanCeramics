@@ -46,46 +46,6 @@ function listarCarts() {
 
 
 
-
-// function ObtenerPaises(){
-
-//     fetch("https://restcountries.com/v3.1/all")
-
-//         .then(resultado =>resultado.json())
-//         .then(data =>{
-//             // console.log(typeof(data))
-//          data.forEach(pais => {
-//            let dataPais ={
-//                 nombre: pais.name.common,
-//                 maps: pais.maps.googleMaps
-
-//            }
-
-//            listaPais.push(dataPais);
-    
-           
-//            let cardCountry = document.createElement("option");
-      
-//            cardCountry.innerHTML = `
-       
-//            <option>${pais.name.common}</option>
-//            `
-//            contentCountry.append(cardCountry)
-//          });
-       
-        
-//         })
-
-
-        
-
-    
-// }   
-
-// ObtenerPaises();
-
-
-
 const formChk = document.getElementById("formCheckout");
 formChk.addEventListener("submit", (e) => handleSubmit(e));
 
