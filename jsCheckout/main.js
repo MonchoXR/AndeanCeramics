@@ -7,7 +7,7 @@ subtTotal = document.getElementById("check_subTotalJS");
 shipTotal = document.getElementById("check_shipJS");
 precioTotal = document.getElementById("check_precioTotal");
 
-contentCountry= document.getElementById("inputCountryJS");
+
 
 let listaPais = []
 
@@ -47,41 +47,42 @@ function listarCarts() {
 
 
 
-function ObtenerPaises(){
+// function ObtenerPaises(){
 
-    fetch("https://restcountries.com/v3.1/all")
+//     fetch("https://restcountries.com/v3.1/all")
 
-        .then(resultado =>resultado.json())
-        .then(data =>{
-         data.forEach(pais => {
-           let dataPais ={
-                nombre: pais.name.common,
-                maps: pais.maps.googleMaps
+//         .then(resultado =>resultado.json())
+//         .then(data =>{
+//             // console.log(typeof(data))
+//          data.forEach(pais => {
+//            let dataPais ={
+//                 nombre: pais.name.common,
+//                 maps: pais.maps.googleMaps
 
-           }
+//            }
 
-           listaPais.push(dataPais);
+//            listaPais.push(dataPais);
     
            
-           let cardCountry = document.createElement("option");
+//            let cardCountry = document.createElement("option");
       
-           cardCountry.innerHTML = `
+//            cardCountry.innerHTML = `
        
-           <option>${pais.name.common}</option>
-           `
-           contentCountry.append(cardCountry)
-         });
+//            <option>${pais.name.common}</option>
+//            `
+//            contentCountry.append(cardCountry)
+//          });
        
         
-        })
+//         })
 
 
         
 
     
-}   
+// }   
 
-ObtenerPaises();
+// ObtenerPaises();
 
 
 
@@ -113,6 +114,7 @@ function handleSubmit (e) {
 
     
 };
+
 
 
 

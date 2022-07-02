@@ -99,21 +99,31 @@
                 <div class="valid-feedback">looks good!</div>
             </div>
 
-            <div class="col-md-6">
-              <label for="inputCityChk" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCityChk" name="inputCityChk" required>
-              <div class="invalid-feedback">Please provide country</div>
-              <div class="valid-feedback">looks good!</div>
-            </div>
-            <div class="col-md-4">
-              <label for="inputStateChk" class="form-label">State</label>
-              <select id="inputStateChk" class="form-select" name="inputStateChk" required="">
+            <div class="col-md-5">
+              <label for="inputStateChkJS" class="form-label">State</label>
+              <select id="inputStateChkJS" class="form-select" name="inputStateChkJS" required="">
                 <option selected="" disabled="" value="">Choose...</option>
-                <option>Mi State</option>
+                <!-- <option>Mi State</option> -->
               </select>
               <div class="invalid-feedback">Please provide State</div>
               <div class="valid-feedback">looks good!</div>
             </div>
+
+
+            <div class="col-md-5">
+              <label for="inputCityChk" class="form-label">City</label>
+              <select id="inputCityChk" class="form-select" name="inputCityChk" required="">
+                <option selected="" disabled="" value="">Choose...</option>
+                <!-- <option>Mi State</option> -->
+              </select>
+              <div class="invalid-feedback">Please provide City</div>
+              <div class="valid-feedback">looks good!</div>
+            </div>
+
+
+
+          
+  
             <div class="col-md-2">
               <label for="inputZipChk" class="form-label">Zip</label>
               <input type="text" class="form-control" id="inputZipChk" name="inputZipChk" required>
@@ -202,6 +212,7 @@
 
 <script src="../jsProducts/carrito.js"></script>
 <script src="../jsCheckout/main.js"> </script>
+<script src="../jsCheckout/apis.js"> </script>
 
 
 </body>
