@@ -5,32 +5,84 @@ let productos = [
         nombre: "Kero",
         precio: 650,
         cantidad:0,
-		img: "../Assets/catalogo/kero2.png",
+		img: "../Assets/catalogo/kero600x600.png",
 	
 	},
 	{
 		id: 1,
-        nombre: "Coffe Cup",
+        nombre: "Gallina PortaHuevos",
         precio: 40,
         cantidad:0,
-		img: "../Assets/catalogo/CoffeCup600x600.jpg",
+		img: "../Assets/catalogo/Gallina600x600.png",
 	},
 	{   
         id: 2,
-		nombre: "Leather Watch",
+		nombre: "Iglesia Ayacuchana",
         precio: 650,
         cantidad:0,
-		img: "../Assets/catalogo/HandWatch600x600.jpg",
+		img: "../Assets/catalogo/IglesiaAyacuchana.png",
 
 	},
-    // {   
-    //     id: 3,
-	// 	nombre: "Leather Watch",
-    //     precio: 650,
-    //     cantidad:0,
-	// 	img: "../Assets/catalogo/HandWatch600x600.jpg",
+    {   
+        id: 3,
+		nombre: "Toro de Pucará",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/ToritoDePucará.png",
 
-	// },
+	},
+
+    {   
+        id: 4,
+		nombre: "Monataña de Huascarán",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/MontañdeHuascaran.png",
+
+	},
+
+    {   
+        id: 5,
+		nombre: "Arca de Noe",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/ArcaNoe.png",
+
+	},
+
+    {   
+        id: 6,
+		nombre: "Lámpara de Angelito",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/AngelitoLamparas.png",
+
+	},
+
+    {   
+        id: 7,
+		nombre: "Lámpara del Arbol de la Felicidad",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/LámparaArboldelaFelicidad.png",
+
+	},
+
+    {   
+        id: 8,
+		nombre: "La Virgen de Guadalupe",
+        precio: 650,
+        cantidad:0,
+		img: "../Assets/catalogo/VirgenDeGuadalupe.png",
+
+	},
+
+
+    
+
+
+
+
 
 
 ];
@@ -61,7 +113,7 @@ for (let producto of productos) {
                </a>
             </div>
   
-            <h5 class=" text-center "> ${producto.nombre}</h5>
+            <h5 class=" text-center text-size "> ${producto.nombre}</h5>
             <div class="prod_cart">
                 <div class="prod_price">
                     <div class="prod_priceBefore">
@@ -146,6 +198,11 @@ const createCard = (producto) => {
         else{
 
             carrito.addCantToCart(producto);   
+
+             //DOM CANTIDAD
+            let cant = document.getElementsByClassName("prd_cantJs") 
+            let index = carrito.articulos.findIndex((a)=> a.id == producto.id)
+            cant[index].innerText =  `${carrito.articulos[index].cantidad} x `;
 
             //DOM SUB TOTAL
             let subTotal = document.getElementsByClassName("prod_subTotal") 

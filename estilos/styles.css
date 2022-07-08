@@ -174,7 +174,6 @@ model-viewer {
   outline: 0; }
 
 .row_cat {
-  max-width: 1920px;
   width: 80%;
   margin: 0 auto;
   display: flex; }
@@ -231,7 +230,7 @@ model-viewer {
         grid-template-areas: "caja " "caja" "caja"; } }
 
 .caja {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/football.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/BannerIndex.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -484,7 +483,7 @@ model-viewer {
     align-content: baseline; }
     .container_prod .row_cat_prod .col_cat_prod {
       margin: 2% 2%;
-      width: 26%; }
+      width: 25%; }
       .container_prod .row_cat_prod .col_cat_prod .prod_marco {
         outline: 2px solid #eeeeee; }
         .container_prod .row_cat_prod .col_cat_prod .prod_marco .prod_img {
@@ -519,6 +518,8 @@ model-viewer {
             height: auto; }
           .container_prod .row_cat_prod .col_cat_prod .prod_marco .prod_img .prod_quickView {
             display: none; }
+        .container_prod .row_cat_prod .col_cat_prod .prod_marco .text-size {
+          height: 30px; }
       @media screen and (max-width: 992px) {
         .container_prod .row_cat_prod .col_cat_prod {
           width: 46%; } }
@@ -581,18 +582,9 @@ model-viewer {
   margin-left: 2%;
   padding: 2% 2%;
   background-color: white; }
-  @media screen and (max-width: 1800px) {
-    .prod_segundaSeccion {
-      width: 40%; } }
-  @media screen and (max-width: 1600px) {
-    .prod_segundaSeccion {
-      width: 55%; } }
-  @media screen and (max-width: 1400px) {
-    .prod_segundaSeccion {
-      width: 65%; } }
   @media screen and (max-width: 1200px) {
     .prod_segundaSeccion {
-      width: 95%; } }
+      width: 40%; } }
   @media screen and (max-width: 992px) {
     .prod_segundaSeccion {
       margin-left: inherit;
@@ -691,6 +683,9 @@ model-viewer {
 
 .prod_colorLetraCart {
   color: #888888; }
+
+.prod_primeraSeccion {
+  width: 100%; }
 
 .banner__blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Fondo2.jpg");
@@ -952,18 +947,38 @@ model-viewer {
   width: 50%;
   padding-left: 50px; }
   .bag_row_2 .bag_col_title {
-    font-size: xx-large; }
+    font-size: 2em; }
   .bag_row_2 .bag_col_precio {
-    font-size: larger;
+    font-size: 1.6em;
     margin-bottom: 3%; }
-  .bag_row_2 .bag_col_color {
+  .bag_row_2 .bag_col_size {
+    font-size: 1.3em; }
+  .bag_row_2 .bag_col_size_desc {
+    font-size: 1em;
     margin-bottom: 3%; }
   .bag_row_2 .bag_col_cantidad {
+    font-size: 1.3em; }
+  .bag_row_2 .bag_col_cant_desc {
+    font-size: 1em;
     margin-bottom: 3%; }
-  .bag_row_2 .bag_col_addCart {
-    margin-bottom: 3%; }
+  .bag_row_2 .bag_col_BtnaddCart {
+    width: 40%;
+    font-size: 1.2em;
+    font-weight: 500;
+    border: 1px solid;
+    border-color: #ef3f49;
+    border-radius: 1px;
+    color: #ef3f49;
+    text-align: center;
+    background: transparent;
+    padding: 1% 1%;
+    margin-bottom: 5%; }
+    .bag_row_2 .bag_col_BtnaddCart:hover {
+      background-color: rgba(255, 0, 0, 0.952);
+      color: white;
+      font-weight: 550; }
   .bag_row_2 .bag_col_Detalles {
-    font-size: large;
+    font-size: 1.3em;
     margin-bottom: 1%; }
 
 .check_banner h1 {

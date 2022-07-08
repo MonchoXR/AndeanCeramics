@@ -47,13 +47,12 @@
     outline: 1px solid #eeeeee;
     background-color: white;
     align-content: baseline;
-    // width: 100%;
-
+   
 
     .col_cat_prod {
 
       margin: 2% 2%;
-      width: 26%;
+      width: 25%;
 
 
       .prod_marco {
@@ -108,6 +107,10 @@
           .prod_quickView {
             display: none;
           }
+        }
+
+        .text-size{
+          height: 30px
         }
       }
 
@@ -219,27 +222,27 @@
   padding: 2% 2%;
   background-color: white;
 
-  @media screen and (max-width: 1800px) {
+  // @media screen and (max-width: 1800px) {
 
-    width: 40%;
+  //   width: 40%;
 
-  }
+  // }
 
-  @media screen and (max-width: 1600px) {
+  // @media screen and (max-width: 1600px) {
 
-    width: 55%;
+  //   width: 55%;
 
-  }
+  // }
 
-  @media screen and (max-width: 1400px) {
+  // @media screen and (max-width: 1400px) {
 
-    width: 65%;
+  //   width: 65%;
 
-  }
+  // }
 
   @media screen and (max-width: 1200px) {
 
-    width: 95%;
+    width: 40%;
 
   }
 
@@ -441,4 +444,8 @@
 
 .prod_colorLetraCart{
   color: #888888 ;
+}
+
+.prod_primeraSeccion{
+  width: 100%;
 }

@@ -44,19 +44,14 @@ function listarCarts() {
         precioTotal.innerText =`$${carrito.calcularTotalConEnvío()}`;
 
 
-    
-
         if(carrito.preciosubTotal<1){
            contenedorCart.innerHTML="CARRITO VACIO";
         }
     
-
         console.log(carrito);
- 
     }
 
 }    
-
 
 
 

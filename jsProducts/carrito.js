@@ -67,11 +67,11 @@ class Carrito {
             if(e.id == articulo.id){
              e.cantidad++;
 
-            let cant = document.getElementsByClassName("prd_cantJs") 
+            // let cant = document.getElementsByClassName("prd_cantJs") 
          
-             let index = this.articulos.findIndex((a)=> a.id == articulo.id)
+            //  let index = this.articulos.findIndex((a)=> a.id == articulo.id)
           
-             cant[index].innerText =  `${e.cantidad} x `;
+            //  cant[index].innerText =  `${e.cantidad} x `;
 
             }
 
