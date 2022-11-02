@@ -61,7 +61,7 @@ let productos = [
 
     {   
         id: 7,
-		nombre: "Lámpara del Arbol de la Felicidad",
+		nombre: "Lámpara Arbol de la Felicidad",
         precio: 650,
         cantidad:0,
 		img: "../Assets/catalogo/LámparaArboldelaFelicidad.png",

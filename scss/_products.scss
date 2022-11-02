@@ -58,10 +58,12 @@
       .prod_marco {
 
         outline: 2px solid #eeeeee;
+        margin: 2% 2%;
+    
 
         .prod_img {
           position: relative;
-          width: 100%;
+          width: 100%;//falta
 
           &:hover {
 
@@ -177,7 +179,7 @@
   }
 
   .prod_priceBefore {
-    text-decoration: line-through;
+      
 
   }
 

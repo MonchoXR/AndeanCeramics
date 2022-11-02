@@ -50,7 +50,7 @@ const formChk = document.getElementById("formCheckout");
 formChk.addEventListener("submit", (e) => handleSubmit(e));
 
 
-function handleSubmit (e) {
+async function handleSubmit (e) {
 	e.preventDefault();
 
 
@@ -61,20 +61,35 @@ function handleSubmit (e) {
     const datachk = new FormData(formChk);
 
     let datosFormchk = Object.fromEntries(datachk.entries());
-    console.log(datosFormchk )
+    console.log(datosFormchk)
   
    
     formChk.reset();
+ 
+
   
     }
     else{
+     
         formChk.classList.add('was-validated')
 
-    }
 
-    
+           
+          
+        // Stripe("pk_test_51LO737J0sNLsCYphAyq9ni1uEq6Y0ohUPY8h1sWMaDPeC2KvulllVSNrWaQpePL7QKaiDJQ8Jlu0pGXM0UMhDkGj00vkEy0uCW").redirectToCheckout({
+        //     lineItems: [{
+        //         price: 'price_1LQGMrJ0sNLsCYphZ6Am4VLI',
+ 
+        //         quantity: 1
+        //     }],
+
+     
+        //     mode: "payment",
+        //     successUrl:"http://127.0.01:5500/assets/success.html",
+        //     cancelUrl:"http://127.0.01:5500/assets/cancel.html"
+        // })
+
+ 
+
+    }    
 };
-
-
-
-

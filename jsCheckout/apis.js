@@ -19,7 +19,7 @@ var requestOptions = {
 
 fetch("https://api.countrystatecity.in/v1/countries", requestOptions)
 .then(response => response.json())
-.then(result => {
+.then(result => { ;
     result.forEach(data => {
          let dataPais ={
         nombre: data.name,

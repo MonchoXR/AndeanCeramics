@@ -812,12 +812,14 @@ model-viewer {
     font-size: 40px; }
 
 .cart_contenedor {
-  max-width: 1920px;
   width: 80%;
   margin: 0 auto;
   padding: 40px 0;
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 992px) {
+    .cart_contenedor {
+      display: inherit; } }
   .cart_contenedor .cart_primeraSeccion {
     width: 100%; }
     .cart_contenedor .cart_primeraSeccion .cart_btnContinueShop {
@@ -866,12 +868,22 @@ model-viewer {
   .cart_contenedor .cart_segundaSeccion {
     width: 40%;
     margin-left: 2%; }
+    @media screen and (max-width: 992px) {
+      .cart_contenedor .cart_segundaSeccion {
+        width: 100%;
+        margin-left: inherit; } }
     .cart_contenedor .cart_segundaSeccion .cart_sinBottomBorder {
       border-bottom: 0; }
     .cart_contenedor .cart_segundaSeccion .cart_summary {
       margin-left: 3%;
       padding: 2%;
       outline: 2px solid rgba(0, 0, 0, 0.1); }
+      @media screen and (max-width: 992px) {
+        .cart_contenedor .cart_segundaSeccion .cart_summary {
+          margin-left: 1%;
+          margin-right: 1%;
+          margin-top: 6%;
+          outline: 4px solid rgba(0, 0, 0, 0.1); } }
       .cart_contenedor .cart_segundaSeccion .cart_summary .cart_colorLetraTotal {
         font-size: 22px;
         font-weight: 700;
@@ -930,6 +942,12 @@ model-viewer {
   .cart_cuponContainer .cart_btnApply {
     width: 60%;
     margin-left: 3%; }
+
+.cart_secSize {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between; }
 
 .bag_container {
   display: flex;
